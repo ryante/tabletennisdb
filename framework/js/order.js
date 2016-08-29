@@ -1,9 +1,9 @@
 /***********************************************************
-	Filename: {phpok}/js/order.js
+	Filename: {weburl}/js/order.js
 	Note	: 订单JS相关动作管理
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年12月18日
 ***********************************************************/
 //添加一行

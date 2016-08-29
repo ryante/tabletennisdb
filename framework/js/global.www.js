@@ -1,9 +1,9 @@
 /***********************************************************
-	Filename: {phpok}js/global.www.js
+	Filename: {weburl}js/global.www.js
 	Note	: 前台公共JS加载
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年9月12日
 ***********************************************************/
 //前台通用弹出窗口

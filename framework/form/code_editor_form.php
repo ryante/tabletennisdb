@@ -1,10 +1,10 @@
 <?php
 /*****************************************************************************************
-	文件： {phpok}/form/code_editor_form.php
+	文件： {weburl}/form/code_editor_form.php
 	备注： 代码编辑框
 	版本： 4.x
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	时间： 2015年03月12日 22时03分
 *****************************************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/libs/ftp.php
+	Filename: {weburl}/libs/ftp.php
 	Note	: FTP基本操作
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013-02-18 17:46
 ***********************************************************/
 class ftp_lib

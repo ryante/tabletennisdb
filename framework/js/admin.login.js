@@ -1,9 +1,9 @@
 /***********************************************************
-	Filename: {phpok}/js/admlogin.js
+	Filename: {weburl}/js/admlogin.js
 	Note	: 管理员登录页涉及到的JS
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2014年1月6日
 ***********************************************************/
 //验证码

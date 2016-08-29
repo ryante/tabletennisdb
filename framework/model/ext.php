@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/model/ext.php
+	Filename: {weburl}/model/ext.php
 	Note	: 扩展字段管理器
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013-03-05 16:56
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

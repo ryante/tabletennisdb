@@ -1,10 +1,10 @@
 <?php
 /*****************************************************************************************
-	文件： {phpok}/engine/db/mysqli.php
+	文件： {weburl}/engine/db/mysqli.php
 	备注： MySQL连接引挈，后续phpok内核文件之一
 	版本： 4.x
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	时间： 2014年10月29日 09时49分
 *****************************************************************************************/
 class db_mysqli extends db

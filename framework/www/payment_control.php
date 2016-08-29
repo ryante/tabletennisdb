@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/www/payment_control.php
+	Filename: {weburl}/www/payment_control.php
 	Note	: 付款操作
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年12月14日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

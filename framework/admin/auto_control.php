@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/admin/auto_control.php
+	Filename: {weburl}/admin/auto_control.php
 	Note	: 自动读写表单处理（数据表qinggan_temp）
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2012-12-10 00:01
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/admin/reply_control.php
+	Filename: {weburl}/admin/reply_control.php
 	Note	: 回复内容管理
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年7月2日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

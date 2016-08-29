@@ -1,6 +1,6 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/model/email.php
+	Filename: {weburl}/model/email.php
 	Note	: 邮件内容管理器
 	Version : 3.0
 	Author  : qinggan

@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/admin/plugin_control.php
+	Filename: {weburl}/admin/plugin_control.php
 	Note	: 插件中心
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2012-12-08 10:04
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
@@ -394,7 +394,7 @@ class plugin_control extends phpok_control
 		$string.= '文件： plugins/'.$id.'/'.$fileid.'.php'."\n\t";
 		$string.= '备注： '.$title.'<'.$note.">\n\t";
 		$string.= '版本： 4.x'."\n\t";
-		$string.= '网站： www.phpok.com'."\n\t";
+		$string.= '网站： www.gzwebcreate.com'."\n\t";
 		if($author){
 			$string.= '作者： '.$author."\n\t";
 		}

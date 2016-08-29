@@ -1,10 +1,10 @@
 <?php
 /*****************************************************************************************
-	文件： {phpok}/model/admin/sysmenu_model.php
+	文件： {weburl}/model/admin/sysmenu_model.php
 	备注： 系统菜单管理器
 	版本： 4.x
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	时间： 2015年08月24日 10时04分
 *****************************************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

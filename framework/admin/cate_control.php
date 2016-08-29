@@ -1,6 +1,6 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/admin/cate_control.php
+	Filename: {weburl}/admin/cate_control.php
 	Note	: 栏目管理
 	Version : 4.0
 	Author  : qinggan

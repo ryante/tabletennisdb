@@ -3,8 +3,8 @@
 	文件： express/showapi/index.php
 	备注： 易源接口之快递查询
 	版本： 4.x
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	时间： 2015年09月19日 18时18分
 *****************************************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

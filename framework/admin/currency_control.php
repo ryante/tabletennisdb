@@ -1,6 +1,6 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/admin/currency_control.php
+	Filename: {weburl}/admin/currency_control.php
 	Note	: 货币管理
 	Version : 3.0
 	Author  : qinggan

@@ -1,9 +1,9 @@
 /***********************************************************
-	Filename: {phpok}/js/module.js
+	Filename: {weburl}/js/module.js
 	Note	: 后台模型管理涉及到的JS
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2015年12月24日 23时15分
 ***********************************************************/
 //检测标题名称是否为空

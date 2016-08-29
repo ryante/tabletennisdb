@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/www/register_control.php
+	Filename: {weburl}/www/register_control.php
 	Note	: 会员注册信息
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2014年10月11日 05时42分
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

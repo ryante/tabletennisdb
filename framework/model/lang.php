@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/model/lang.php
+	Filename: {weburl}/model/lang.php
 	Note	: 语言包管理
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年10月20日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

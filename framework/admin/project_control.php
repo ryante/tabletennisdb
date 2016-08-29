@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/admin/project_control.php
+	Filename: {weburl}/admin/project_control.php
 	Note	: 项目任务处理器
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2012-12-26 11:50
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

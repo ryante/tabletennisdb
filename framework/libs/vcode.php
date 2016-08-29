@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/libs/vcode.php
+	Filename: {weburl}/libs/vcode.php
 	Note	: 图形验证码类，使用PNG透明图片
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2014年1月6日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

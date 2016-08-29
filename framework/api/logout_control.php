@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/api/logout_control.php
+	Filename: {weburl}/api/logout_control.php
 	Note	: 会员退出接口
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年11月2日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/model/address.php
+	Filename: {weburl}/model/address.php
 	Note	: 地址库管理，每个会员都有30个地址库
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年11月27日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

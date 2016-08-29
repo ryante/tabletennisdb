@@ -2,8 +2,8 @@
 	文件： js/jquery.global.js
 	说明： PHPOK编写并整理的通用组件，包含常用的Ajax，弹出窗，桌面组件
 	版本： 4.0
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	日期： 2014年7月11日
 ***************************************************************************************************/
 ;(function($){

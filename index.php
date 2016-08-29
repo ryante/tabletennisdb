@@ -1,17 +1,12 @@
 <?php
-/**
- * PHPOK企业站系统
- *
- * 本程序采用LGPL协议开源授权，具体内容：(http://www.gnu.org/licenses/lgpl.html)
- *
- * 有问题请进官网查阅，我们的官网是：(http://www.phpok.com)
- *
- * @file index.php
- * @author phpok.com <admin@phpok.com>
- * @copyright 2015-2016 深圳市锟铻科技有限公司
- * @version 4.5.x
- * @date 2016年01月17日
- */
+/***********************************************************
+Filename: {weburl}/index.php
+Note	: 入口文件
+Version : 4.0
+Web		: www.gzwebcreate.com
+Author  : ryante <ryante@163.com>
+Update  : 2014-10-19 13:03
+ ***********************************************************/
 /**
  * 定义常量，所有PHP文件仅允许从这里入口
  */

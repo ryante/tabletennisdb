@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/www/tag_control.php
+	Filename: {weburl}/www/tag_control.php
 	Note	: Tag标签读取
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013-04-20 23:51
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

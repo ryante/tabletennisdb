@@ -1,6 +1,6 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/admin/usergroup_control.php
+	Filename: {weburl}/admin/usergroup_control.php
 	Note	: 会员组管理
 	Version : 3.1
 	Author  : qinggan

@@ -1,10 +1,10 @@
 <?php
 /*****************************************************************************************
-	文件： {phpok}/libs/keycode.php
+	文件： {weburl}/libs/keycode.php
 	备注： 安全随机码生成并或验证功能
 	版本： 4.x
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	时间： 2014年6月3日
 *****************************************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

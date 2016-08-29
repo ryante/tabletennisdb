@@ -1,9 +1,9 @@
 /***********************************************************
-	Filename: {phpok}/js/user.js
+	Filename: {weburl}/js/user.js
 	Note	: 会员管理中涉及到的JS
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年5月2日
 ***********************************************************/
 //检查添加操作

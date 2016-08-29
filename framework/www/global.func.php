@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/www/global.func.php
+	Filename: {weburl}/www/global.func.php
 	Note	: 前台公共函数
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013-04-16 13:13
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

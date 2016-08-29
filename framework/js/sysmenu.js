@@ -1,9 +1,9 @@
 /***********************************************************
-	Filename: {phpok}/js/sysmenu.js
+	Filename: {weburl}/js/sysmenu.js
 	Note	: 核心配置
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2012-12-05 22:43
 ***********************************************************/
 //设置状态

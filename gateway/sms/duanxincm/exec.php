@@ -3,8 +3,8 @@
 	文件： gateway/sms/duanxincm/exec.php
 	备注： 执行操作
 	版本： 4.x
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	时间： 2015年10月09日 16时43分
 *****************************************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

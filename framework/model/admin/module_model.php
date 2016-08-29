@@ -1,10 +1,10 @@
 <?php
 /*****************************************************************************************
-	文件： {phpok}/model/admin/module_model.php
+	文件： {weburl}/model/admin/module_model.php
 	备注： 模块扩展
 	版本： 4.x
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	时间： 2015年09月05日 21时03分
 *****************************************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

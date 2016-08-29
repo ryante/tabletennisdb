@@ -2,8 +2,8 @@
 /***********************************************************
 	Note	: phpok4升级引挈控制器
 	Version : 4.x
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2015年06月11日 14时33分
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

@@ -1,0 +1,3 @@
+/xml/langs.xml  去掉英语选项
+data/tpl_admin/index_block_allsetting.html 去掉公共内容的某些选项
+framework/view/index.html 去掉底部版权，去掉单击右键的script

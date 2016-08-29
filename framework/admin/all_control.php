@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/admin/all_control.php
+	Filename: {weburl}/admin/all_control.php
 	Note	: 全局栏目配置
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2012-12-12 16:41
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

@@ -2,8 +2,8 @@
 	文件： js/global.js
 	说明： PHPOK默认模板中涉及到的JS
 	版本： 4.0
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	日期： 2014年9月1日
 ***************************************************************************************************/
 function top_search()

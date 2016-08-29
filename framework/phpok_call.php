@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/phpok_call.php
+	Filename: {weburl}/phpok_call.php
 	Note	: PHPOK调用中心类
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013-04-20 17:42
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

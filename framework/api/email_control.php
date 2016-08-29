@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/api/email_control.php
+	Filename: {weburl}/api/email_control.php
 	Note	: 邮件相关操作
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2015年06月13日 11时31分
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

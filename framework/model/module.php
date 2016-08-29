@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/model/module.php
+	Filename: {weburl}/model/module.php
 	Note	: 模型管理维护
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2012-11-29 21:06
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

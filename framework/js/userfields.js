@@ -1,9 +1,9 @@
 /***********************************************************
-	Filename: {phpok}/js/userfields.js
+	Filename: {weburl}/js/userfields.js
 	Note	: 会员自定义字段管理器
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年5月4日
 ***********************************************************/
 //编辑字段

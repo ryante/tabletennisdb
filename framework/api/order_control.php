@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/api/order_control.php
+	Filename: {weburl}/api/order_control.php
 	Note	: 创建订单操作
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年12月8日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/model/post_control.php
+	Filename: {weburl}/model/post_control.php
 	Note	: 表单系统
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年6月5日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

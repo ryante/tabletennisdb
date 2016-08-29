@@ -3,8 +3,8 @@
 	Filename: css/css.php
 	Note	: CSS样式集合器，用于合并多个CSS
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年10月17日
 ***********************************************************/
 error_reporting(E_ALL ^ E_NOTICE);

@@ -1,9 +1,9 @@
 /***********************************************************
-	Filename: {phpok}/js/cate.js
+	Filename: {weburl}/js/cate.js
 	Note	: 栏目管理
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2012-12-06 17:42
 ***********************************************************/
 

@@ -3,8 +3,8 @@
 	文件： payment/tenpay/notify.php
 	备注： 订单异步通知处理
 	版本： 4.x
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	时间： 2014年5月2日
 *****************************************************************************************/
 error_reporting(E_ALL ^ E_NOTICE);

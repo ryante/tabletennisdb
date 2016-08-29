@@ -2,8 +2,8 @@
 	文件： js/webuploader/admin.upload.js
 	说明： 后台附件类型上传操作类，仅限后台操作
 	版本： 4.0
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	日期： 2015年04月27日 12时36分
 ***************************************************************************************************/
 ;(function($){

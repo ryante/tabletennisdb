@@ -3,8 +3,8 @@
 	文件： gateway/payment/wxpay/wxpay.php
 	备注： 微信支付类
 	版本： 4.x
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	时间： 2015年11月04日 14时22分
 *****************************************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

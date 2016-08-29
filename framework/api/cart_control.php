@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/api/cart_control.php
+	Filename: {weburl}/api/cart_control.php
 	Note	: 购物车相关信息管理
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年11月11日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

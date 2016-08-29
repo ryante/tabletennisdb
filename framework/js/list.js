@@ -1,9 +1,9 @@
 /***********************************************************
-	Filename: {phpok}/js/list.js
+	Filename: {weburl}/js/list.js
 	Note	: 内容管理里的JS
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013-02-21 11:13
 ***********************************************************/
 function project_check()

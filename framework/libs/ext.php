@@ -1,10 +1,10 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/libs/ext.php
+	Filename: {weburl}/libs/ext.php
 	Note	: 扩展表内容读取及格式化
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2013年7月20日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}

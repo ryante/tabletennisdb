@@ -1,6 +1,6 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/model/usergroup.php
+	Filename: {weburl}/model/usergroup.php
 	Note	: 会员组模块
 	Version : 3.0
 	Author  : qinggan

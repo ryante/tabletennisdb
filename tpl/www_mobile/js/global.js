@@ -2,8 +2,8 @@
 	文件： js/global.js
 	说明： 前台通用JS页
 	版本： 4.0
-	网站： www.phpok.com
-	作者： qinggan <qinggan@188.com>
+	网站： www.gzwebcreate.com
+	作者： ryante <ryatne@163.com>
 	日期： 2016年03月29日
 ***************************************************************************************************/
 function kfonline()

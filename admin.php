@@ -3,9 +3,9 @@
 	Filename: admin.php
 	Note	: 后台管理
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
-	Update  : 2012-10-15 15:26
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
+	Update  : 2013-10-15 15:26
 ***********************************************************/
 define("PHPOK_SET",true);
 

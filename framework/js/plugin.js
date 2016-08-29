@@ -1,9 +1,9 @@
 /***********************************************************
-	Filename: {phpok}/js/plugin.js
+	Filename: {weburl}/js/plugin.js
 	Note	: 插件中心
 	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
+	Web		: www.gzwebcreate.com
+	Author  : ryante <ryante@163.com>
 	Update  : 2012-12-08 14:14
 ***********************************************************/
 

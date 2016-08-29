@@ -1,6 +1,6 @@
 <?php
 /***********************************************************
-	Filename: {phpok}/www/usercp_control.php
+	Filename: {weburl}/www/usercp_control.php
 	Note	: 用户控制面板
 	Version : 3.0
 	Author  : qinggan
