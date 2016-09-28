@@ -270,6 +270,12 @@ $(document).ready(function(){
 		</div>
 		<div class="content"><input type="text" id="tag" name="tag" class='title' value='{$rs.tag}' /></div>
 	</div>
+	<script>
+
+		$("#tag").bind("input propertychange change",function(event){
+			alert($("#tag").val());
+		});
+	</script>
 	<!-- /if -->
 </div>
 <div class="main2">
