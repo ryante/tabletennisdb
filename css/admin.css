@@ -807,3 +807,10 @@ button.aui_state_highlight:active { border-color:#1c6a9e; filter: progid:DXImage
 
 .biz_attr{border:1px solid #ccc;margin:10px auto;padding:10px;background:#f1f1f1;}
 .biz_attr .options{margin:10px;padding:5px;}
+
+
+.list_tag{ border:1px solid rgb(229, 229, 229); width: 99%;box-shadow: 3px 3px 5px #888888;}
+.list_tag ul{ padding: 0px;}
+.list_tag li{ list-style: none; padding: 0px 10px; line-height: 26px;}
+.list_tag li:hover{ background-color:rgb(230, 230, 230) }
+.list_tag li a{ display: block;}

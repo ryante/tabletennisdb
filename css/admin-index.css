@@ -20,7 +20,10 @@ p{word-wrap:break-word}
 .foot_right{ float:right; padding-right:20px; text-align:right; color:#2a5ba7; font-size:14px;}
 
 .header{ width:100%; height:45px; background:#203854;  position:fixed;z-index: 1300;}
-.logo{ width:223px; height:45px; float:left;}
+.logo{ width:283px; height:45px; float:left;}
+.logo img{ float: left;}
+.logo h2{ color: #fff; line-height: 45px; text-decoration: none; font-size: 20px;}
+.logo a:hover{ text-decoration: none;}
 
 .head_tool{ width:28px; margin:7px 0 0 10px; float:right; height:28px; cursor:pointer; background:url(../images/ibx_header2.png) no-repeat; position:relative;}
 .head_user{  float:right; margin:7px 20px 0 10px; position:relative; cursor:pointer; background-position:bottom right; z-index:7;}

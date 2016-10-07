@@ -265,17 +265,27 @@ $(document).ready(function(){
 	<!-- if $p_rs.is_tag -->
 	<div class="table">
 		<div class="title">
-			Tag标签
+			自定义Tag标签
 			<span class="note">多个Tag用英文空格分开，最多不能超过10个</span>
 		</div>
-		<div class="content"><input type="text" id="tag" name="tag" class='title' value='{$rs.tag}' /></div>
+		<div class="content">
+			<input type="text" id="tag" name="tag" class='title' value='{$rs.tag}' />
+			<!-- <div class="list_tag">
+				<ul>
+					<li><a href="" onclick="chooseTag(this)">标签一</a></li>
+					<li><a href="" class="tag_name">标签一</a></li>
+					<li><a href="" class="tag_name">标签一</a></li>
+					<li><a href="" class="tag_name">标签一</a></li>
+					<li><a href="" class="tag_name">标签一</a></li>
+				</ul>
+			</div> -->
+		</div>
 	</div>
-	<script>
-
-		$("#tag").bind("input propertychange change",function(event){
-			alert($("#tag").val());
-		});
-	</script>
+	 <script>
+	// 	$("#tag").on("input propertychange",function(event){
+	// 		alert($("#tag").val());
+	// 	});
+	 </script>
 	<!-- /if -->
 </div>
 <div class="main2">
