@@ -108,6 +108,7 @@ ul.admin_panel li.hover{background-position:0 -93px;}
 .list th.lft{text-align:left;text-indent:5px;}
 .list tr.list{background:#F3F3F3}
 .list tr:nth-child(2n+1){background:#F1F1F1}
+.list tr:hover{ background: #b8e4ed;}
 .list td{padding:3px;}
 .list tr.end{background:none}
 .list td{cursor:default;max-width:400px;overflow:hidden;word-break:break-all}

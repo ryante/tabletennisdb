@@ -40,7 +40,7 @@ class list_model_base extends phpok_model
 		if(!$mid) return false;
 		$field = $this->ext_fields($mid,'ext');
 		$field = $field ? $field.",l.*,u.user _user" : "l.*,u.user _user";
-		$field.= ",b.price,b.currency_id,b.weight,b.volume,b.unit";
+		//$field.= ",b.price,b.currency_id,b.weight,b.volume,b.unit";//注释 与自定义的price,weight发生冲突，不能读取其数据
 		$sql = "SELECT ".$field." FROM ".$this->db->prefix."list l ";
 		$sql.= " LEFT JOIN ".$this->db->prefix."list_".$mid." ext ON(l.id=ext.id AND l.site_id=ext.site_id AND l.project_id=ext.project_id) ";
 		$sql.= " LEFT JOIN ".$this->db->prefix."user u ON(l.user_id=u.id AND u.status=1) ";
