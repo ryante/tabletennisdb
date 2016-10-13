@@ -93,3 +93,7 @@ $config['order']['price'] = 'product,shipping,fee,discount';
 //针对收藏夹里图片获取
 $config['fav']['thumb_id'] = 'thumb';
 $config['fav']['note_id'] = 'content';
+
+
+//后台显示特定模块，让用户可能设置该模块的字段说明
+$config['module']['show_id'] = [74, 75, 76, 77, 78, 79, 80, 81];

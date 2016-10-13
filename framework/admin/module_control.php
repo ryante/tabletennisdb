@@ -228,7 +228,11 @@ class module_control extends phpok_control
 		{
 			$this->assign("fields_list",$fields_list);
 		}
-		$this->view("module_fields");
+		if($this->get('show') == 'material'){
+			$this->view("module_material_fields");
+		} else {
+			$this->view("module_fields");
+		}
 	}
 
 	public function field_add_f()
@@ -391,7 +395,12 @@ class module_control extends phpok_control
 		$m_rs = $this->model('module')->get_one($rs['module_id']);
 		$this->assign('m_rs',$m_rs);
 		$this->assign("id",$id);
-		$this->view("module_field_set");
+		if($this->get('show') == 'material'){
+			$this->view("module_material_field_set");
+		} else {
+			$this->view("module_field_set");
+		}
+
 	}
 
 	function field_edit_save_f()
@@ -518,5 +527,25 @@ class module_control extends phpok_control
 		}
 		$this->json(true);
 	}
+
+	//EDITED START 只显示器材模块
+	public function material_f()
+	{
+		if(!$this->popedom["list"]){
+			error(P_Lang('您没有权限执行此操作'),'','error');
+		}
+		$rslist = $this->model('module')->get_all();
+		$config = $this->config;
+		$showId = $config['module']['show_id'];//framework/config/config.global.php里面设置
+		foreach ($rslist as $key => $value) {
+			if(!in_array($value['id'],$showId)) {
+				unset($rslist[$key]);
+			}
+		}
+		$this->assign("rslist",$rslist);
+		$this->view("module_material");
+	}
+
+
 }
 ?>

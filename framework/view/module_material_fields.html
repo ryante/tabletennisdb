@@ -1,0 +1,73 @@
+<!-- inc:head -->
+<script type="text/javascript" src="{func add_js module.js}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#title").blur(function(){check_title(false)});
+});
+</script>
+
+<div class="tips">
+	<div class="action"><a href="javascript:module_field_create('{$id}');void(0);" title="添加字段">添加字段</a></div>
+	<div class="action"><a href="{url ctrl=module/}" title="返回模块管理">返回模块管理</a></div>
+	您当前的位置：
+	<a href="{echo admin_url('module')}">模块管理</a>
+	&raquo; {$rs.title}
+	&raquo; 字段管理器
+</div>
+
+<!-- if $used_list -->
+<div class="list">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+	<th class="lft">&nbsp;字段名</th>
+	<th class="lft">名称</th>
+	<th class="lft">备注</th>
+	<th class="lft">排序</th>
+	<th></th>
+</tr>
+<!-- foreach($used_list AS $key=>$value) -->
+<tr{if $used_list_id.num%2 == ""} class="list"{/if}>
+	<td>{$value.identifier}</td>
+	<td>{$value.title}</td>
+	<td>{$value.note}</td>
+	<td>{$value.taxis}</td>
+	<td>
+		<div class="button-group">
+			<input type="button" value="{lang编辑}" onclick="module_material_field_edit('{$value.id}')" class="phpok-btn" />
+		</div>
+	</td>
+</tr>
+<!-- /foreach -->
+</table>
+</div>
+<!-- /if -->
+<script>
+	//编辑字段
+	function module_material_field_edit(id)
+	{
+		var url = get_url("module","field_edit") + "&id="+id + "&show=material";
+		$.dialog.open(url,{
+			'title':'编辑字段 #'+id,
+			'lock':true,
+			'width':'600px',
+			'height':'70%',
+			'resize':false,
+			'drag':false,
+			'ok':function(){
+				var iframe = this.iframe.contentWindow;
+				if (!iframe.document.body) {
+					alert('iframe还没加载完毕呢');
+					return false;
+				};
+				iframe.save();
+				return false;
+			},
+			'okVal':'保存编辑信息',
+			'cancel':function(){
+				return true;
+			}
+		})
+	}
+</script>
+
+<!-- inc:foot -->
