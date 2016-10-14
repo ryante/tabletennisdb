@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50538
 File Encoding         : 65001
 
-Date: 2016-10-13 16:51:03
+Date: 2016-10-14 18:01:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -375,7 +375,7 @@ CREATE TABLE `tb_ext` (
   `ext` text NOT NULL COMMENT '扩展内容',
   PRIMARY KEY (`id`),
   KEY `module` (`module`)
-) ENGINE=MyISAM AUTO_INCREMENT=822 DEFAULT CHARSET=utf8 COMMENT='字段管理器';
+) ENGINE=MyISAM AUTO_INCREMENT=823 DEFAULT CHARSET=utf8 COMMENT='字段管理器';
 
 -- ----------------------------
 -- Records of tb_ext
@@ -398,6 +398,7 @@ INSERT INTO `tb_ext` VALUES ('816', 'cate-592', '通栏图片', 'banner', 'varch
 INSERT INTO `tb_ext` VALUES ('817', 'cate-595', '通栏图片', 'banner', 'varchar', '', 'upload', '', 'safe', '', '40', 'a:3:{s:7:\"cate_id\";s:1:\"1\";s:11:\"is_multiple\";s:1:\"0\";s:11:\"upload_auto\";s:1:\"1\";}');
 INSERT INTO `tb_ext` VALUES ('818', 'cate-598', '通栏图片', 'banner', 'varchar', '', 'upload', '', 'safe', '', '40', 'a:3:{s:7:\"cate_id\";s:1:\"1\";s:11:\"is_multiple\";s:1:\"0\";s:11:\"upload_auto\";s:1:\"1\";}');
 INSERT INTO `tb_ext` VALUES ('813', 'project-87', '内容', 'content', 'longtext', '', 'editor', '', 'html', '', '255', 'a:11:{s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"360\";s:7:\"is_code\";s:0:\"\";s:9:\"btn_image\";s:1:\"1\";s:9:\"btn_video\";s:1:\"1\";s:8:\"btn_file\";s:1:\"1\";s:8:\"btn_page\";s:0:\"\";s:8:\"btn_info\";s:0:\"\";s:7:\"is_read\";s:0:\"\";s:5:\"etype\";s:4:\"full\";s:7:\"btn_map\";s:0:\"\";}');
+INSERT INTO `tb_ext` VALUES ('822', 'project-392', '图片', 'pic', 'varchar', '', 'text', '', 'safe', '', '255', 'a:2:{s:8:\"form_btn\";s:5:\"image\";s:5:\"width\";s:3:\"500\";}');
 
 -- ----------------------------
 -- Table structure for tb_extc
@@ -430,6 +431,7 @@ INSERT INTO `tb_extc` VALUES ('818', '1047');
 INSERT INTO `tb_extc` VALUES ('819', '1047');
 INSERT INTO `tb_extc` VALUES ('820', '1047');
 INSERT INTO `tb_extc` VALUES ('821', '1047');
+INSERT INTO `tb_extc` VALUES ('822', 'res/201610/14/dc7fc657ea01274f.png');
 
 -- ----------------------------
 -- Table structure for tb_fav
@@ -741,12 +743,12 @@ CREATE TABLE `tb_list` (
   PRIMARY KEY (`id`),
   KEY `project_id` (`project_id`),
   KEY `site_id` (`site_id`,`identifier`,`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=1822 DEFAULT CHARSET=utf8 COMMENT='内容主表';
+) ENGINE=MyISAM AUTO_INCREMENT=1837 DEFAULT CHARSET=utf8 COMMENT='内容主表';
 
 -- ----------------------------
 -- Records of tb_list
 -- ----------------------------
-INSERT INTO `tb_list` VALUES ('1773', '0', '0', '21', '41', '1', '首页-banner', '1472993754', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', 'index-banner');
+INSERT INTO `tb_list` VALUES ('1773', '0', '0', '21', '41', '1', '标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 ', '1472993754', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', 'index-banner');
 INSERT INTO `tb_list` VALUES ('1775', '0', '587', '74', '392', '1', '品牌一反胶套胶一', '1475044561', '0', '1', '0', '0', '', '', '', '', '反胶 套胶', '', '0', '0', '');
 INSERT INTO `tb_list` VALUES ('1373', '0', '68', '22', '43', '1', '来自工程师的8项Web性能提升建议', '1424920049', '0', '1', '0', '60', '', '', '', '', '', 'h', '1458699466', '0', '');
 INSERT INTO `tb_list` VALUES ('1368', '0', '8', '22', '43', '1', 'EverEdit - 值得关注的代码编辑器', '1424912045', '0', '1', '0', '26', '', '', '', '', '', '', '0', '0', '');
@@ -788,8 +790,23 @@ INSERT INTO `tb_list` VALUES ('1815', '0', '606', '80', '386', '1', '品牌二�
 INSERT INTO `tb_list` VALUES ('1816', '0', '608', '81', '385', '1', '品牌一成品球拍一', '1476328379', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
 INSERT INTO `tb_list` VALUES ('1817', '0', '608', '81', '385', '1', '品牌一成品球拍二', '1476328432', '0', '1', '0', '0', '', '', '', '', '', 'n', '0', '0', '');
 INSERT INTO `tb_list` VALUES ('1818', '0', '609', '81', '385', '1', '品牌二成品球拍一', '1476328479', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
-INSERT INTO `tb_list` VALUES ('1819', '0', '609', '81', '385', '1', '品牌二成品球拍二', '1476328517', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1819', '0', '609', '81', '385', '1', '品牌二成品球拍二', '1476328517', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '');
 INSERT INTO `tb_list` VALUES ('1820', '0', '587', '74', '392', '1', '品牌一反胶套胶三', '1476329674', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1822', '0', '0', '23', '42', '1', '首页', '1476409947', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1823', '0', '0', '23', '42', '1', '数据库', '1476409962', '10', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1824', '0', '0', '23', '42', '1', '评测', '1476409991', '20', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1825', '0', '0', '23', '42', '1', '社区', '1476410006', '30', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1826', '0', '0', '23', '42', '1', '登录', '1476410017', '100', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1827', '1823', '0', '23', '42', '1', '反胶套胶', '1476416529', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1828', '1823', '0', '23', '42', '1', '正胶套胶', '1476416552', '10', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1829', '1823', '0', '23', '42', '1', '球板', '1476416558', '20', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1830', '1823', '0', '23', '42', '1', '球台', '1476416564', '30', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1831', '1823', '0', '23', '42', '1', '球', '1476416569', '40', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1832', '1823', '0', '23', '42', '1', '鞋', '1476416575', '50', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1833', '1823', '0', '23', '42', '1', '海绵', '1476416581', '60', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1834', '1823', '0', '23', '42', '1', '成品球拍', '1476416587', '70', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1835', '0', '0', '21', '41', '1', '标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二', '1476424031', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1836', '0', '0', '21', '41', '1', '标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三', '1476424073', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
 
 -- ----------------------------
 -- Table structure for tb_list_21
@@ -811,7 +828,9 @@ CREATE TABLE `tb_list_21` (
 -- ----------------------------
 -- Records of tb_list_21
 -- ----------------------------
-INSERT INTO `tb_list_21` VALUES ('1773', '1', '41', '0', '#', '_blank', '1046', '');
+INSERT INTO `tb_list_21` VALUES ('1773', '1', '41', '0', 'index.php?id=1423', '_self', '1046', '内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一');
+INSERT INTO `tb_list_21` VALUES ('1835', '1', '41', '0', 'index.php?id=1424', '_self', '1046', '内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二内容二');
+INSERT INTO `tb_list_21` VALUES ('1836', '1', '41', '0', 'index.php?id=1373', '_self', '1046', '内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容三内容');
 
 -- ----------------------------
 -- Table structure for tb_list_22
@@ -886,6 +905,19 @@ CREATE TABLE `tb_list_23` (
 -- ----------------------------
 -- Records of tb_list_23
 -- ----------------------------
+INSERT INTO `tb_list_23` VALUES ('1822', '1', '42', '0', 'a:2:{s:7:\"default\";s:9:\"index.php\";s:7:\"rewrite\";s:10:\"index.html\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1823', '1', '42', '0', 'a:2:{s:7:\"default\";s:21:\"index.php?id=material\";s:7:\"rewrite\";s:13:\"material.html\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1824', '1', '42', '0', 'a:2:{s:7:\"default\";s:17:\"index.php?id=news\";s:7:\"rewrite\";s:9:\"news.html\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1825', '1', '42', '0', 'a:2:{s:7:\"default\";s:3:\"###\";s:7:\"rewrite\";s:0:\"\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1826', '1', '42', '0', 'a:2:{s:7:\"default\";s:3:\"###\";s:7:\"rewrite\";s:0:\"\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1827', '1', '42', '0', 'a:2:{s:7:\"default\";s:20:\"index.php?id=rubbers\";s:7:\"rewrite\";s:12:\"rubbers.html\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1828', '1', '42', '0', 'a:2:{s:7:\"default\";s:17:\"index.php?id=pips\";s:7:\"rewrite\";s:9:\"pips.html\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1829', '1', '42', '0', 'a:2:{s:7:\"default\";s:19:\"index.php?id=blades\";s:7:\"rewrite\";s:11:\"blades.html\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1830', '1', '42', '0', 'a:2:{s:7:\"default\";s:19:\"index.php?id=tables\";s:7:\"rewrite\";s:11:\"tables.html\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1831', '1', '42', '0', 'a:2:{s:7:\"default\";s:18:\"index.php?id=balls\";s:7:\"rewrite\";s:10:\"balls.html\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1832', '1', '42', '0', 'a:2:{s:7:\"default\";s:17:\"index.php?id=shoe\";s:7:\"rewrite\";s:9:\"shoe.html\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1833', '1', '42', '0', 'a:2:{s:7:\"default\";s:20:\"index.php?id=sponges\";s:7:\"rewrite\";s:12:\"sponges.html\";}', '_self');
+INSERT INTO `tb_list_23` VALUES ('1834', '1', '42', '0', 'a:2:{s:7:\"default\";s:28:\"index.php?id=premade-rackets\";s:7:\"rewrite\";s:20:\"premade-rackets.html\";}', '_self');
 
 -- ----------------------------
 -- Table structure for tb_list_46
@@ -1964,7 +1996,6 @@ CREATE TABLE `tb_phpok` (
 INSERT INTO `tb_phpok` VALUES ('18', '网站首页图片播放', '41', 'arclist', 'picplayer', '1', '1', '0', 'a:23:{s:5:\"psize\";s:1:\"5\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:7:\"in_text\";s:1:\"1\";s:4:\"attr\";b:0;s:11:\"fields_need\";b:0;s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";i:0;s:10:\"in_project\";i:0;s:7:\"in_cate\";i:0;s:8:\"title_id\";b:0;}', '0', '');
 INSERT INTO `tb_phpok` VALUES ('19', '头部导航内容', '42', 'arclist', 'menu', '1', '1', '0', 'a:23:{s:5:\"psize\";s:2:\"80\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:7:\"in_text\";s:1:\"1\";s:4:\"attr\";b:0;s:11:\"fields_need\";b:0;s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";s:1:\"1\";s:10:\"in_project\";i:0;s:7:\"in_cate\";i:0;s:8:\"title_id\";b:0;}', '0', '');
 INSERT INTO `tb_phpok` VALUES ('20', '公司简介', '87', 'arc', 'aboutus', '1', '1', '0', 'a:13:{s:5:\"psize\";i:0;s:6:\"offset\";i:0;s:7:\"is_list\";i:0;s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:0:\"\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:0:\"\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:7:\"aboutus\";}', '0', '');
-INSERT INTO `tb_phpok` VALUES ('55', '友情链接', '142', 'arclist', 'link', '1', '1', '0', 'a:23:{s:5:\"psize\";s:2:\"30\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:7:\"in_text\";s:1:\"1\";s:4:\"attr\";b:0;s:11:\"fields_need\";b:0;s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";i:0;s:10:\"in_project\";s:1:\"2\";s:7:\"in_cate\";b:0;s:8:\"title_id\";b:0;}', '0', '');
 INSERT INTO `tb_phpok` VALUES ('91', '新闻中心', '43', 'arclist', 'news', '1', '1', '7', 'a:23:{s:5:\"psize\";s:1:\"8\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:7:\"in_text\";i:0;s:4:\"attr\";b:0;s:11:\"fields_need\";b:0;s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";i:0;s:10:\"in_project\";s:1:\"2\";s:7:\"in_cate\";b:0;s:8:\"title_id\";b:0;}', '0', '');
 INSERT INTO `tb_phpok` VALUES ('104', '资讯中心', '43', 'arclist', 'titlelist', '1', '1', '7', 'a:13:{s:5:\"psize\";s:2:\"10\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:0:\"\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:0:\"\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}', '0', '');
 INSERT INTO `tb_phpok` VALUES ('105', '资讯中心', '43', 'catelist', 'news_catelist', '1', '1', '7', 'a:13:{s:5:\"psize\";i:0;s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:0:\"\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:0:\"\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}', '0', '');
@@ -2582,9 +2613,9 @@ CREATE TABLE `tb_project` (
 -- ----------------------------
 INSERT INTO `tb_project` VALUES ('41', '0', '1', '21', '0', '首页-banner', '', '20', '1', '', '', '', '1', 'images/ico/picplayer.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'picture-player', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '', '0', '0', '0', '0');
 INSERT INTO `tb_project` VALUES ('42', '0', '1', '23', '0', '顶部导航', '', '10', '1', '', '', '', '0', 'images/ico/menu.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '导航名称', '', '30', '0', 'top-menu', '', '', '', '1', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '', '0', '0', '0', '0');
-INSERT INTO `tb_project` VALUES ('43', '0', '1', '22', '0', '评测', '', '40', '1', '', '', '', '0', 'images/ico/article.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '评测', '', '10', '0', 'news', '', '', '', '0', '1', '0', '0', '0', '0', '1', '0', '', '0', '0', '0', '', '', '', '', '', '1', '', '0', '0', '0', '0');
+INSERT INTO `tb_project` VALUES ('43', '0', '1', '22', '0', '评测', '', '40', '1', '', 'arc_list', 'arc_detail', '0', 'images/ico/article.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '评测', '', '10', '0', 'news', '', '', '', '0', '1', '0', '0', '0', '0', '1', '0', '', '0', '0', '0', '', '', '', '', '', '1', '', '0', '0', '0', '0');
 INSERT INTO `tb_project` VALUES ('87', '0', '1', '0', '0', '关于我们', '', '30', '1', '', '', '', '1', 'images/ico/about.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'about', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '', '0', '0', '0', '0');
-INSERT INTO `tb_project` VALUES ('383', '0', '1', '0', '0', '数据库', '', '50', '1', '', '', '', '0', 'images/ico/product.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'material', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '', '0', '0', '0', '0');
+INSERT INTO `tb_project` VALUES ('383', '0', '1', '0', '0', '数据库', '', '50', '1', '', 'pic_list', 'pic_detail', '0', 'images/ico/product.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'material', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '', '0', '0', '0', '0');
 INSERT INTO `tb_project` VALUES ('385', '383', '1', '81', '607', '成品球拍', '成品球拍', '10', '1', '', 'rubbers_list', 'rubbers_content', '0', '', 'l.sort ASC,l.dateline DESC,l.id DESC', '成品球拍器材名称', '', '30', '0', 'premade-rackets', '', '', '', '0', '1', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '1', '', '0', '0', '0', '0');
 INSERT INTO `tb_project` VALUES ('386', '383', '1', '80', '604', '海绵', '海绵', '10', '1', '', 'rubbers_list', 'rubbers_content', '0', '', 'l.sort ASC,l.dateline DESC,l.id DESC', '海绵器材名称', '', '30', '0', 'sponges', '', '', '', '0', '1', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '1', '', '0', '0', '0', '0');
 INSERT INTO `tb_project` VALUES ('387', '383', '1', '79', '601', '鞋', '鞋', '10', '1', '', 'rubbers_list', 'rubbers_content', '0', '', 'l.sort ASC,l.dateline DESC,l.id DESC', '鞋名称', '', '30', '0', 'shoe', '', '', '', '0', '1', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '1', '', '0', '0', '0', '0');
@@ -2656,7 +2687,7 @@ CREATE TABLE `tb_res` (
   `admin_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '管理员ID',
   PRIMARY KEY (`id`),
   KEY `ext` (`ext`)
-) ENGINE=MyISAM AUTO_INCREMENT=1050 DEFAULT CHARSET=utf8 COMMENT='资源ID';
+) ENGINE=MyISAM AUTO_INCREMENT=1052 DEFAULT CHARSET=utf8 COMMENT='资源ID';
 
 -- ----------------------------
 -- Records of tb_res
@@ -2665,6 +2696,8 @@ INSERT INTO `tb_res` VALUES ('1046', '1', 'res/201610/06/', 'ba1590ee706a6839.jp
 INSERT INTO `tb_res` VALUES ('1047', '1', 'res/201610/06/', '6aa6003bd12e314c.jpg', 'jpg', 'res/201610/06/6aa6003bd12e314c.jpg', 'res/201610/06/_1047.jpg', '1475723750', 'banner1', 'a:2:{s:5:\"width\";i:1280;s:6:\"height\";i:299;}', '', '', '0', '0', '1');
 INSERT INTO `tb_res` VALUES ('1048', '1', 'res/201610/06/', 'd4b41c0382bd7045.jpg', 'jpg', 'res/201610/06/d4b41c0382bd7045.jpg', 'res/201610/06/_1048.jpg', '1475723849', 'IMG_20130518_102515', 'a:2:{s:5:\"width\";i:2560;s:6:\"height\";i:1920;}', '', '', '0', '0', '1');
 INSERT INTO `tb_res` VALUES ('1049', '1', 'res/201610/06/', '06dc60377b0ce94d.png', 'png', 'res/201610/06/06dc60377b0ce94d.png', 'res/201610/06/_1049.png', '1475729667', 'Table_tennis_96px_1185974_easyicon.net', 'a:2:{s:5:\"width\";i:96;s:6:\"height\";i:96;}', '', '', '0', '0', '1');
+INSERT INTO `tb_res` VALUES ('1050', '1', 'res/201610/14/', '18fdd2d3d7a64dd9.png', 'png', 'res/201610/14/18fdd2d3d7a64dd9.png', 'res/201610/14/_1050.png', '1476417576', 'e', 'a:2:{s:5:\"width\";i:32;s:6:\"height\";i:32;}', '', '', '0', '0', '1');
+INSERT INTO `tb_res` VALUES ('1051', '1', 'res/201610/14/', 'dc7fc657ea01274f.png', 'png', 'res/201610/14/dc7fc657ea01274f.png', 'res/201610/14/_1051.png', '1476436175', 'e1', 'a:2:{s:5:\"width\";i:40;s:6:\"height\";i:40;}', '', '', '0', '0', '1');
 
 -- ----------------------------
 -- Table structure for tb_res_cate
@@ -2716,6 +2749,10 @@ INSERT INTO `tb_res_ext` VALUES ('1048', '12', 'res/201610/06/auto_1048.jpg', '1
 INSERT INTO `tb_res_ext` VALUES ('1048', '2', 'res/201610/06/thumb_1048.jpg', '1475723849');
 INSERT INTO `tb_res_ext` VALUES ('1049', '12', 'res/201610/06/auto_1049.png', '1475729667');
 INSERT INTO `tb_res_ext` VALUES ('1049', '2', 'res/201610/06/thumb_1049.png', '1475729667');
+INSERT INTO `tb_res_ext` VALUES ('1050', '12', 'res/201610/14/auto_1050.png', '1476417576');
+INSERT INTO `tb_res_ext` VALUES ('1050', '2', 'res/201610/14/thumb_1050.png', '1476417576');
+INSERT INTO `tb_res_ext` VALUES ('1051', '12', 'res/201610/14/auto_1051.png', '1476436175');
+INSERT INTO `tb_res_ext` VALUES ('1051', '2', 'res/201610/14/thumb_1051.png', '1476436175');
 
 -- ----------------------------
 -- Table structure for tb_session
@@ -2771,7 +2808,7 @@ CREATE TABLE `tb_site` (
 -- ----------------------------
 -- Records of tb_site
 -- ----------------------------
-INSERT INTO `tb_site` VALUES ('1', '1', '乒乓球器械网', '/', '1', '网站正在建设中！', '1', '1', 'default', 'res/201610/06/06dc60377b0ce94d.png', '', '1', '1', '本系统暂停新会员注册，给您带来不便还请见谅，如需会员服务请联系QQ：40782502', '1', '本系统暂停会员登录，给您带来不便还请见谅！', 'res/201610/06/06dc60377b0ce94d.png', '', 'cn', '0', '', '乒乓球器械网', '乒乓球器械网', '乒乓球器械网', 'prefix[P]-year-month-date-rand-user-number', '1', '1', '1');
+INSERT INTO `tb_site` VALUES ('1', '1', '乒乓球器械网', '/', '1', '网站正在建设中！', '1', '18', 'default', 'res/201610/14/18fdd2d3d7a64dd9.png', '', '1', '1', '本系统暂停新会员注册，给您带来不便还请见谅，如需会员服务请联系QQ：40782502', '1', '本系统暂停会员登录，给您带来不便还请见谅！', 'res/201610/06/06dc60377b0ce94d.png', '', 'cn', '0', '', '乒乓球器械网', '乒乓球器械网', '乒乓球器械网', 'prefix[P]-year-month-date-rand-user-number', '1', '1', '1');
 
 -- ----------------------------
 -- Table structure for tb_site_domain
@@ -2951,7 +2988,7 @@ CREATE TABLE `tb_tpl` (
 -- Records of tb_tpl
 -- ----------------------------
 INSERT INTO `tb_tpl` VALUES ('1', '默认风格', 'phpok.com', 'www', '1', '0', 'html', 'css,images,js', 'phpinc');
-INSERT INTO `tb_tpl` VALUES ('18', '第二个测试站', 'phpok.com', 'web', '1', '0', 'html', 'css,js,images', 'phpinc');
+INSERT INTO `tb_tpl` VALUES ('18', 'tbtpl', 'ryante', 'tbtpl', '1', '0', 'html', 'css,js,images,fonts,picture', 'phpinc');
 
 -- ----------------------------
 -- Table structure for tb_user

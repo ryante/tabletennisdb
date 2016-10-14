@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header fadeInLeft animated">
+			<h1><a class="navbar-brand" href="{$sys.url}" title="{$config.title}"><img src="{$config.logo}" alt="{$config.title}">Table Tennis</a></h1>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right fadeInRight animated">
+				<!-- php:$list = phpok('menu') -->
+				<!-- loop from=$list.rslist key=$key value=$value id=mindex -->
+				<li{if $highlight == $mindex.num || $menutitle == $value.title} class="current"{/if}>
+					<a class="nav-in" href="{$value.url}" title="{$value.title}" target="{$value.target}" {if $value.title=='数据库' }id="li-2"{/if} ><span data-letters="{$value.title}">{$value.title}</span></a>
+					{if $value.sonlist}
+						<div id="box-2" class="hidden-box hidden-loc-us" style="display:none" >
+							<ul>
+								<!-- loop from=$value.sonlist key=$k value=$v -->
+									<li><a href="{$v.url}" title="{$v.title}" target="{$v.target}" >{$v.title}</a></li>
+								<!-- /loop -->
+							</ul>
+						</div>
+					{/if}
+				</li>
+				<!-- /loop -->
+			</ul>
+		</div>
+	</div>
+</nav>
