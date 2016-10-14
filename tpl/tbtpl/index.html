@@ -52,90 +52,41 @@
 						<div class="container table-cell-display" >
 							<h2 class="ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s"><img src="images/equipment_title.png" alt=""></h2>
 							<div class="train-grids">
-								<div class="col-md-3 train-grid ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+							<!-- php:$list = phpok('index-material') -->
+							<!-- loop from=$list key=$key value=$value id=list_id-->
+							<!-- php:$pid = $value['id'] -->
+							{if $value.show}
+								<div class="col-md-3 train-grid ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="{($list_id.num/10)+0.3}s">
 									<div class="train-top hvr-bounce-to-right">
 										<div class="train-img">
-											<img src="picture/e1.png"/>
+											<img src="{$value.pic}"/>
 										</div>
-										<h4>器材名称</h4>
+										<h4>{$value.title}</h4>
 										<p class="category-count">
 											<span class="btn btn-primary">
-											  库存量 <b class="badge">4</b>
+											  库存量 
+											  <b class="badge">
+											  	<!-- php:$count = phpok('index-material-count',"pid=$pid") -->
+											  	{$count}
+											  </b>
 											</span>
 										</p>
 										<div class="list-group latest">
-										  <a href="#" class="list-group-item">最新入库</a>
-										  <a href="#" class="list-group-item">最多人赞</a>
-										  <a href="#" class="list-group-item">评价最高</a>
+										  <!-- php:$latest = phpok('index-material-top',"pid=$pid&orderby=dateline desc") -->
+										  <a href="{$latest.rs.url}" class="list-group-item">最新入库</a>
+										  <!-- php:$hots = phpok('index-material-top',"pid=$pid&orderby=hits desc") -->
+										  <a href="{$hots.rs.url}" class="list-group-item">最多人气</a>
+										  <!-- php:$overall = phpok('index-material-top',"pid=$pid&orderby=ext.overall asc,hits desc") -->
+										  <a href="{$overall.rs.url}" class="list-group-item">评价最高</a>
 										</div>
 										<div class="btn_news_more category-view-more">
-											<a href="index.php?id=news" title="新闻资讯" class="btn">查看更多</a>
+											<a href="{$value.url}" title="{$value.title}" class="btn">查看更多</a>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-3 train-grid ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
-									<div class="train-top hvr-bounce-to-right">
-										<div class="train-img">
-											<img src="picture/e1.png"/>
-										</div>
-										<h4>器材名称</h4>
-										<p class="category-count">
-											<span class="btn btn-primary">
-											  库存量 <b class="badge">4</b>
-											</span>
-										</p>
-										<div class="list-group latest">
-										  <a href="#" class="list-group-item">最新入库</a>
-										  <a href="#" class="list-group-item">最多人赞</a>
-										  <a href="#" class="list-group-item">评价最高</a>
-										</div>
-										<div class="btn_news_more category-view-more">
-											<a href="index.php?id=news" title="新闻资讯" class="btn">查看更多</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-3 train-grid ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.6s" swiper-animate-delay="0.6s">
-									<div class="train-top hvr-bounce-to-right">
-										<div class="train-img">
-											<img src="picture/e1.png"/>
-										</div>
-										<h4>器材名称</h4>
-										<p class="category-count">
-											<span class="btn btn-primary">
-											  库存量 <b class="badge">4</b>
-											</span>
-										</p>
-										<div class="list-group latest">
-										  <a href="#" class="list-group-item">最新入库</a>
-										  <a href="#" class="list-group-item">最多人赞</a>
-										  <a href="#" class="list-group-item">评价最高</a>
-										</div>
-										<div class="btn_news_more category-view-more">
-											<a href="index.php?id=news" title="新闻资讯" class="btn">查看更多</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-3 train-grid ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.7s">
-									<div class="train-top hvr-bounce-to-right">
-										<div class="train-img">
-											<img src="picture/e1.png"/>
-										</div>
-										<h4>器材名称</h4>
-										<p class="category-count">
-											<span class="btn btn-primary">
-											  库存量 <b class="badge">4</b>
-											</span>
-										</p>
-										<div class="list-group latest">
-										  <a href="#" class="list-group-item">最新入库</a>
-										  <a href="#" class="list-group-item">最多人赞</a>
-										  <a href="#" class="list-group-item">评价最高</a>
-										</div>
-										<div class="btn_news_more category-view-more">
-											<a href="index.php?id=news" title="新闻资讯" class="btn">查看更多</a>
-										</div>
-									</div>
-								</div>
+							{/if}
+							<!-- /loop -->
+								
 							</div>
 						</div>
 					</div>
@@ -268,11 +219,11 @@
 											我们将尽快回复您。
 									</div>
 									<div class="clearfix"></div>								
-									<h5><i class='glyphicon glyphicon-phone-alt'></i>&nbsp; 400-966-5388</h5>
-									<h5><i class='glyphicon glyphicon glyphicon-envelope'></i>&nbsp; <a href="">aaaaaaaa@163.com</a></h5>
-									<h5><i class='glyphicon glyphicon-map-marker'></i>&nbsp; 广州市林和西路157号保利中汇广场A栋</h5>
+									<h5><i class='glyphicon glyphicon-phone-alt'></i>&nbsp; {$config.contact.tel}</h5>
+									<h5><i class='glyphicon glyphicon glyphicon-envelope'></i>&nbsp; <a href="mailto:{$config.contact.email}">{$config.contact.email}</a></h5>
+									<h5><i class='glyphicon glyphicon-map-marker'></i>&nbsp; {$config.contact.address}</h5>
 									<h5 class="code">
-										<img src="images/code.jpg" width="100px" alt="">
+										<img src="{$config.contact.qrcode.filename}" width="100px" alt="">
 										<p>关注我们</p>
 									</h5>
 
@@ -287,15 +238,15 @@
 									    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="您的邮箱...">
 									  </div>
 									  <div class="form-group">
-									    <textarea class="form-control" rows="8">在这里留言...</textarea>
+									    <textarea class="form-control" rows="8" onclick="this.text=''">在这里留言...</textarea>
 									  </div>
 									  <div class="form-group">
 									  	<button type="submit" class="btn btn-info" >提  交</button>
 									  </div>
 									 </form>
 								</div>
-								<div class="col-md-12" style="margin-top: 80px;">
-									<p>Copyright &copy; 2016.Company name All rights reserved.</p>
+								<div class="col-md-12" style="margin-top: 2%;">
+									<p>{$config.copyright.content}</p>
 								</div>
 							</div>
 							
