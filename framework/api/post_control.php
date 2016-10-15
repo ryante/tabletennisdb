@@ -40,17 +40,17 @@ class post_control extends phpok_control
 
 	public function save_f()
 	{
-		if($this->config['is_vcode'] && function_exists('imagecreate')){
-			$code = $this->get('_chkcode');
-			if(!$code){
-				$this->json(P_Lang('验证码不能为空'));
-			}
-			$code = md5(strtolower($code));
-			if($code != $_SESSION['vcode']){
-				$this->json(P_Lang('验证码填写不正确'));
-			}
-			unset($_SESSION['vcode']);
-		}
+		// if($this->config['is_vcode'] && function_exists('imagecreate')){
+		// 	$code = $this->get('_chkcode');
+		// 	if(!$code){
+		// 		$this->json(P_Lang('验证码不能为空'));
+		// 	}
+		// 	$code = md5(strtolower($code));
+		// 	if($code != $_SESSION['vcode']){
+		// 		$this->json(P_Lang('验证码填写不正确'));
+		// 	}
+		// 	unset($_SESSION['vcode']);
+		// }
 		$id = $this->get('id','system');
 		if(!$id){
 			$this->json(P_Lang('未绑定相应的项目'));
@@ -154,7 +154,13 @@ class post_control extends phpok_control
 			}
 			$this->model('task')->add_once('post',$param);
 		}
-		$this->json(true);
+		//
+		if($id=='leavemsg'){
+			echo "<script>alert('您的留言信息已发布，请耐心等候管理员审核，感谢您的提交');window.location.href='index.php';</script>";
+		} else {
+			$this->json(true);
+		}
+		
 	}
 
 	public function delete_f()

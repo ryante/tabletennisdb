@@ -70,4 +70,4 @@ html,body{
 .leave-msg form { margin-top: 30px;}
 .leave-msg form .form-group{ margin-bottom: 20px;}
 .leave-msg form input { height: 45px;}
-.leave-msg form button{ float: left; font-size: 15px; width: 100px;}
+.leave-msg form button{ float: left; font-size: 15px; width: 100px; margin-top: 20px;}

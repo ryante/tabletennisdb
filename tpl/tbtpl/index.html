@@ -5,6 +5,7 @@
 	<script src="js/swiper-3.3.1.jquery.min.js"></script>
 	<script src="js/swiper.animate1.0.2.min.js"></script>
 	<script type="text/javascript" src="js/mySwiper.js"></script>
+
 	<body>
 		<!--header-->
 		
@@ -13,37 +14,48 @@
 			
 			<!-- 如果需要分页器 -->
 	    	<div class="swiper-pagination"></div>
-			<div class="swiper-wrapper">
-
+			<div class="swiper-wrapper" >
 				<!--banner START-->
 				<div class="swiper-slide swiper-slide1">
-					<!-- php:$list = phpok('picplayer') -->
-					<!-- if $list.total -->
-					<!-- loop from=$list.rslist key=$key value=$value -->
-					<div class="banner-section" style="background: url({$value.pic.filename})  no-repeat 0px 0px; background-size: cover;">
-						<div class="container">
-							<div class="slider">
-								<div class="callbacks_container">
-									<ul class="rslides" id="slider">
-										<li>
-											<div class="caption">
-												<div class="col-md-6 cap-left ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
-													<p>{func phpok_cut $value.note 92 ...}</p>
+					<div class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner"  role="listbox">
+						<!-- php:$list = phpok('picplayer') -->
+						<!-- if $list.total -->
+						<!-- loop from=$list.rslist key=$key value=$value id=list_id-->
+						<div class="banner-section item {if $list_id.num==1}active{/if}" style="background: url({$value.pic.filename})  no-repeat 0px 0px; background-size: cover;" >
+							<div class="container ">
+								<div class="slider">
+									<div class="callbacks_container">
+										<ul class="rslides" id="slider">
+											<li>
+												<div class="caption">
+													<div class="col-md-6 cap-left ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+														<p>{func phpok_cut $value.note 92 ...}</p>
+													</div>
+													<div class="col-md-6 cap-right ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+														<h3><a href="{$value.link}" target="{$value.target}" title="{$value.title}">{func phpok_cut $value.title 17 }</a></h3>
+													</div>
+													<div class="clearfix"></div>
 												</div>
-												<div class="col-md-6 cap-right ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
-													<h3><a href="{$value.link}" target="{$value.target}" title="{$value.title}">{func phpok_cut $value.title 17 }</a></h3>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</li>
-									</ul>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
+						<!-- /loop -->
+						<!-- /if -->
 					</div>
-					<!-- /loop -->
-					<!-- /if -->
+					</div>
 				</div>
+				<script type="text/javascript">
+				//首页banner切换
+				$(document).ready(function(){
+				   $('.carousel').carousel({
+				      interval: 3000
+				    })
+				});
+				</script>
 				<!--banner END-->
 
 				<!--数据库总览 START-->
@@ -229,21 +241,25 @@
 
 								</div>
 								<div class="col-md-5 leave-msg">
+
 									<h2>联系我们</h2>
-									<form role="form">
+									<script src="js/jQuery.FormValidator.js"></script>
+									<form  id="form" method="post" action='api.php?id=leavemsg&c=post&f=save' name="form" causeformvalidate="true">
 									  <div class="form-group">
-									    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="您的名字...">
+									    <input id="name" class="form-control" name="title" type="text" causeformvalidate="true" placeholder="您的名字..."><span id="name_error" class="Error" >用户名不能为空！</span>
 									  </div>
 									  <div class="form-group">
-									    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="您的邮箱...">
+									    <input id="email" class="form-control" name="email" type="text" placeholder="您的邮箱..."  causeformvalidate="true"><span id="email_error" class="Error">邮件格式错误！</span>
 									  </div>
 									  <div class="form-group">
-									    <textarea class="form-control" rows="8" onclick="this.text=''">在这里留言...</textarea>
+									    <textarea id="content" class="form-control" name="content" rows="5" causeformvalidate="true" placeholder="在这里留言..."></textarea>
+                    					<span id="content_error" class="Error">内容不能为空！</span>
 									  </div>
 									  <div class="form-group">
 									  	<button type="submit" class="btn btn-info" >提  交</button>
 									  </div>
 									 </form>
+									 <script src="js/check.js"></script>
 								</div>
 								<div class="col-md-12" style="margin-top: 2%;">
 									<p>{$config.copyright.content}</p>

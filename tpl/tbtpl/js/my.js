@@ -4,6 +4,8 @@
  * @date    2016-09-01 13:44:53
  * @version $Id$
  */
+
+
 //属性提示
 jQuery( document ).ready(function( $ ) {
    $("[data-toggle='tooltip']").tooltip();
