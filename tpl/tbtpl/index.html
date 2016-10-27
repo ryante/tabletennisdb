@@ -17,8 +17,8 @@
 			<div class="swiper-wrapper" >
 				<!--banner START-->
 				<div class="swiper-slide swiper-slide1">
-					<div class="carousel slide" data-ride="carousel">
-					<div class="carousel-inner"  role="listbox">
+					<div class="carousel slide" data-ride="carousel" style="height: 100%">
+					<div class="carousel-inner"  role="listbox" style="height: 100%">
 						<!-- php:$list = phpok('picplayer') -->
 						<!-- if $list.total -->
 						<!-- loop from=$list.rslist key=$key value=$value id=list_id-->
@@ -43,7 +43,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- /loop -->
+						<!-- /loop --> 
 						<!-- /if -->
 					</div>
 					</div>
@@ -62,13 +62,15 @@
 				<div class="swiper-slide swiper-slide2" style="background-color: #ECECEC">
 					<div class="train w3-agile table-display" >
 						<div class="container table-cell-display" >
-							<h2 class="ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s"><img src="images/equipment_title.png" alt=""></h2>
+							<h2 class="ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="images/equipment_title.png" alt=""></h2>
 							<div class="train-grids">
 							<!-- php:$list = phpok('index-material') -->
+							<!-- php:$num = 0.3 -->
 							<!-- loop from=$list key=$key value=$value id=list_id-->
 							<!-- php:$pid = $value['id'] -->
 							{if $value.show}
-								<div class="col-md-3 train-grid ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="{($list_id.num/10)+0.3}s">
+							<!-- php:$num = $num + 0.1 -->
+								<div class="col-md-3 train-grid ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="{$num}s">
 									<div class="train-top hvr-bounce-to-right">
 										<div class="train-img">
 											<img src="{$value.pic}"/>
