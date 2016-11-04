@@ -10,7 +10,7 @@ $(document).ready(function(){
 	<div class="action"><a href="javascript:module_field_create('{$id}');void(0);" title="添加字段">添加字段</a></div>
 	<div class="action"><a href="{url ctrl=module/}" title="返回模块管理">返回模块管理</a></div>
 	您当前的位置：
-	<a href="{echo admin_url('module')}">模块管理</a>
+	<a href="{echo admin_url('module','material')}&menu_id=86">模块管理</a>
 	&raquo; {$rs.title}
 	&raquo; 字段管理器
 </div>
@@ -21,21 +21,17 @@ $(document).ready(function(){
 <tr>
 	<th class="lft">&nbsp;字段名</th>
 	<th class="lft">名称</th>
+	<th >是否在首页热门器材中显示</th>
+	<th class="lft">首页展示排序</th>
 	<th class="lft">备注</th>
-	<th class="lft">排序</th>
-	<th></th>
 </tr>
 <!-- foreach($used_list AS $key=>$value) -->
 <tr{if $used_list_id.num%2 == ""} class="list"{/if}>
 	<td>{$value.identifier}</td>
 	<td>{$value.title}</td>
-	<td>{$value.note}</td>
-	<td>{$value.taxis}</td>
-	<td>
-		<div class="button-group">
-			<input type="button" value="{lang备注修改}" onclick="module_material_field_edit('{$value.id}')" class="phpok-btn" />
-		</div>
-	</td>
+	<td  align="center"><span class="status{$value.index_show}" id="status_{$value.id}" {if $popedom.set}onclick="material_set_index_show({$value.id})"{else} style="cursor:default"{/if} value="{$value.index_show}"></span></td>
+	<td><input type="text" class="short center" value="{$value.index_show_sort}" onblur="material_field_edit('index_show_sort',this.value,{$value.id})" style="width:80px" /></td>
+	<td><textarea name="" id="" cols="50" rows="2" onblur="material_field_edit('note',this.value,{$value.id})">{$value.note}</textarea></td>
 </tr>
 <!-- /foreach -->
 </table>
@@ -68,6 +64,48 @@ $(document).ready(function(){
 			}
 		})
 	}
+
+	function material_field_edit(field,val,id){
+		$.ajax({
+			'url':get_url('module','material_field_save')  + "&id="+id + "&field="+field + "&val="+val,
+			'type':'get',
+			'dataType':'json',
+			'success':function(rs){
+				if(rs.status == 'ok'){
+					$.dialog.alert('修改成功');
+				}else{
+					$.dialog.alert(rs.content);
+					return false;
+				}
+			}
+		});
+	} 
+
+	function material_set_index_show(id){
+		var val = $("#status_"+id).attr("value");
+		var old_cls = "status"+val;
+		if(val == '0'){
+			val = 1;
+		} else {
+			val =0;
+		}
+		$.ajax({
+			'url':get_url('module','material_field_save')  + "&id="+id + "&field=index_show" + "&val="+val,
+			'type':'get',
+			'dataType':'json',
+			'success':function(rs){
+				if(rs.status == 'ok'){
+					var new_cls = "status"+val;
+					$("#status_"+id).removeClass(old_cls).addClass(new_cls).attr("value",val);
+				}else{
+					$.dialog.alert(rs.content);
+					return false;
+				}
+			}
+		});
+	} 
+
+	
 </script>
 
 <!-- inc:foot -->

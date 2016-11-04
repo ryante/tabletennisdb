@@ -131,7 +131,12 @@ class list_control extends phpok_control
 		//设置内容列表
 		if($rs["module"]){
 			$this->content_list($rs);
-			$this->view("list_content");
+			if($this->get('hot')){
+				$this->view("list_content_hot");
+			} else {
+				$this->view("list_content");
+			}
+			
 		}else{
 			$show_edit = true;
 			$extlist = $this->model('ext')->ext_all('project-'.$id);
@@ -292,7 +297,14 @@ class list_control extends phpok_control
 		$pageid = $this->get($this->config["pageid"],"int");
 		if(!$pageid) $pageid = 1;
 		$offset = ($pageid-1) * $psize;
-		$condition = "l.site_id='".$site_id."' AND l.project_id='".$pid."' AND l.parent_id='0' ";
+		
+		//Edited  显示数据下所有的热闹器材
+		if($this->get('hot')){
+			$condition = "l.site_id='".$site_id."' AND l.project_id between 385 and 392 AND l.parent_id='0' AND l.attr='h' ";
+		} else {
+			$condition = "l.site_id='".$site_id."' AND l.project_id='".$pid."' AND l.parent_id='0' ";
+		}
+		//Edited
 		$pageurl = $this->url("list","action","id=".$pid);
 		$cateid = $this->get("cateid","int");
 		if($cateid){
@@ -450,6 +462,14 @@ class list_control extends phpok_control
 			$string = 'home='.P_Lang('首页').'&prev='.P_Lang('上一页').'&next='.P_Lang('下一页').'&last='.P_Lang('尾页').'&half=5';
 			$string.= '&add='.P_Lang('数量：').'(total)/(psize)'.P_Lang('，').P_Lang('页码：').'(num)/(total_page)&always=1';
 			$pagelist = phpok_page($pageurl,$total,$pageid,$psize,$string);
+			//EDIT START
+			if($this->get('hot')){
+				foreach ($rslist as $key => $value) {
+					$project = $this->model('project')->project_one($value['project'],$value['project_id']);
+					$rslist[$key]['project_title'] = $project['title'];
+				}
+			}
+			//EDIT END
 			$this->assign("pagelist",$pagelist);
 			$this->assign("rslist",$rslist);
 		}

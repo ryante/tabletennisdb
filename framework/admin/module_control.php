@@ -546,6 +546,28 @@ class module_control extends phpok_control
 		$this->view("module_material");
 	}
 
+	//EDITED START 修改器材模块的备注，首页展示，首页展示排序的字段值
+	public function material_field_save_f()
+	{
+		if(!$this->popedom['set']){
+			$this->json(P_Lang('您没有权限执行此操作'));
+		}
+		$id = $this->get('id','int');
+		if(!$id){
+			$this->json(P_Lang('未指定ID'));
+		}
+		$field = $this->get('field');
+		$allowEditField = ['note','index_show','index_show_sort'];
+		if(!in_array($field, $allowEditField)){
+			$this->json(P_Lang('请求有误'));
+		}
+		$val = $this->get('val');
+		$array = ["{$field}" => "{$val}"];
+		$this->model('module')->fields_save($array,$id);
+		$this->model('module')->update_fields($id);
+		$this->json(true);
+	}
+
 
 }
 ?>
