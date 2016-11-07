@@ -619,6 +619,7 @@ a.button1 {
 }
 .testimonials-grids dl.rating dd{
     float: left;
+    width: 60px;
 }
 .testimonials-grids dl .progress{
   margin-bottom: 15px;

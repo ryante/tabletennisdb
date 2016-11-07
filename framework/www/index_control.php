@@ -93,17 +93,34 @@ class index_control extends phpok_control
 			$project = $this->db->get_one("SELECT id,title FROM tb_project WHERE id={$value['project_id']}");//项目信息
 			$hotMaterial[$key]['project'] = $project;
 
-			$cate = $this->db->get_one("SELECT id,title FROM tb_cate WHERE id={$value['cate_id']}");//分类信息
+			$cate = $this->db->get_one("SELECT id,title,identifier FROM tb_cate WHERE id={$value['cate_id']}");//分类信息
 			$hotMaterial[$key]['cate'] = $cate;
 
-			$showField = $this->db->get_all("SELECT identifier,title FROM tb_module_fields WHERE module_id={$value['module_id']} AND index_show=1 ORDER BY index_show_sort ASC limit 4");//器材所对应的模块允许显示的前四个字段名称及标识
-			$field = '';
+			$showField = $this->db->get_all("SELECT * FROM tb_module_fields WHERE module_id={$value['module_id']} AND index_show=1 ORDER BY index_show_sort ASC limit 4");//器材所对应的模块允许显示的前四个字段名称及标识
+
+            $field = '';
 			$property = '';
 			if(!empty($showField)){
-				foreach ($showField as $v){
+				foreach ($showField as $k => $v){
 					if($v['identifier']){
 						$field[] = $v['identifier'];
+                        $v['title'] =  str_replace(['用户评估的','制造商标明的','(1-10)','(1-100)','制造商的','用户的'],'',$v['title']);
 						$property[$v['identifier']]['title'] = $v['title'];
+                        switch ($k){
+                            case '0':
+                                $progressStyle = 'success';
+                                break;
+                            case '1':
+                                $progressStyle = 'warning';
+                                break;
+                            case '2':
+                                $progressStyle = 'info';
+                                break;
+                            case '3':
+                                $progressStyle = 'danger';
+                                break;
+                        }
+                        $property[$v['identifier']]['progress_style'] = $progressStyle;//进度条样式
 					}
 				}
 				$fieldStr = implode($field,',');
@@ -111,15 +128,26 @@ class index_control extends phpok_control
 				$fieldStr = '*';
 			}
 
-			$fieldValue = $this->db->get_one("SELECT {$fieldStr} FROM tb_list_{$value['module_id']} WHERE id={$value['id']}");//通过上面找到允许显示的标识，查出其相关的内容
+			$fieldValue = $this->db->get_one("SELECT thumb,label,content,{$fieldStr} FROM tb_list_{$value['module_id']} WHERE id={$value['id']}");//通过上面找到允许显示的标识，查出其相关的内容
 			foreach ($fieldValue as $k => $val){
 				if(in_array($k,$field)){
 					$property[$k]['val'] = $val;
 				}
 			}
+
+			$labels = unserialize($fieldValue['label']);
+			foreach ($labels as $label){
+				$rs = $this->db->get_one("SELECT title FROM tb_opt WHERE group_id=22 AND val={$label}");//查询出其对应的标签名,关联到的group_id为固定值=>22
+				$labelName = $rs['title'];
+				$hotMaterial[$key]['label'][$label] = $labelName;
+			}
+
+            $picInfo = $this->db->get_one("SELECT filename FROM tb_res WHERE id={$fieldValue['thumb']}");
+
+            $hotMaterial[$key]['pic'] = $picInfo['filename'];
 			$hotMaterial[$key]['property'] = $property;
+			$hotMaterial[$key]['content'] = $fieldValue['content'];
 		}
-		print_r($hotMaterial);echo 33;die;
 		return $hotMaterial;
 	}
 

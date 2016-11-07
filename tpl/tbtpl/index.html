@@ -113,106 +113,44 @@
 					<div class="testimonials-section table-display hot-material" >
 						<div class="container table-cell-display">
 							<h2 class="ani ts" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" style="text-align:center; margin-bottom: 40px;"><img src="images/hot_equipment_title.png"></h2>
+							<!-- loop from=$hotMaterial key=$key value=$value id=list_id-->
 							<div class="testimonials-grids ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
 								<div class="col-md-2 testimonials-grid1 test1 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" style="visibility: visible;">
-									<img src="picture/t1.png" class="img-responsive" alt="">
+									<img src="{$value.pic}" class="img-responsive" alt="" style="height: 127px; width: 127px;">
 								</div>
 								<div class="col-md-7 testimonials-grid  ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" style="visibility: visible;">
-									<h5><a href="">这是器材的标题</a></h5>
-									<p class="statement">这是器材的说明这是器材的说明这是器材的说明这是器材的说明这是器材的说明这是说明这是说明这是材的说明这是说明这是说明这是器材的说明&nbsp;&nbsp;<a href="">>>详细</a></p>
+									<h5><a href="index.php?id={$value.id}">{$value.title}</a></h5>
+									<p class="statement">{func phpok_cut $value.content 60}&nbsp;&nbsp;<a href="index.php?id={$value.id}">>>详细</a></p>
 									<p class="extra">
-										<i class="glyphicon glyphicon-tags"></i><span><b><a href="">标签一</a></b><b><a href="">标签二</a></b><b><a href="">标签三</a></b></span>
+										<i class="glyphicon glyphicon-tags"></i>
+										<span>
+											<!-- loop from=$value.label key=$labelKey value=$label -->
+											<b><a href="index.php?label={$label}">{$label}</a></b>
+											<!-- /loop -->
+										</span>
 									</p>
 									<p class="extra">
-										<i class="glyphicon glyphicon-eye-open"></i><span>111</span>
-										<i class="glyphicon glyphicon-time"></i><span>2016-9-3 2:29:28</span>
-										<i class="glyphicon glyphicon-th-list"></i><span><b><a href="">这是分类名</a></b></span>
+										<i class="glyphicon glyphicon-eye-open"></i><span>{$value.hits}</span>
+										<i class="glyphicon glyphicon-time"></i><span>{func date "Y-m-d H:i:s" $value.dateline}</span>
+										<i class="glyphicon glyphicon-th-list"></i><span><b><a href="index.php?id={$value.project.id}&cate={$value.cate.identifier}">{$value.cate.title}</a></b></span>
 									</p>
 								</div>
 								<div class="col-md-3 testimonials-grid ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" style="visibility: visible;">
 									<h5>&nbsp;</h5>
 									<dl class="rating">
-										<dd>速度&nbsp;&nbsp;&nbsp;</dd>
+										<!-- loop from=$value.property key=$propertyKey value=$property id=property_id-->
+										<dd>{$property.title}&nbsp;&nbsp;&nbsp;</dd>
 										<dt>
 											<div class="progress">
-												<div class="progress-bar progress-bar-success" aria-valuenow="3" aria-valuemin="0" aria-valuemax="10"  style="width: 30%">3</div>
+												<div class="progress-bar progress-bar-{$property.progress_style}" aria-valuenow="3" aria-valuemin="0" aria-valuemax="10"  style="width: {if $property.val < 10}{$property.val * 10}{else}{$property.val}{/if}%">{$property.val}</div>
 											</div>
 										</dt>
-										
-										<dd>自旋&nbsp;&nbsp;&nbsp;</dd>
-										<dt>
-											<div class="progress">
-												<div class="progress-bar progress-bar-warning" aria-valuenow="6" aria-valuemin="0" aria-valuemax="10" style="width: 60%">6</div>
-											</div>
-										</dt>
-										<dd>控制&nbsp;&nbsp;&nbsp;</dd>
-										<dt>
-											<div class="progress">
-												<div class="progress-bar progress-bar-info" aria-valuenow="8" aria-valuemin="0" aria-valuemax="10" style="width: 80%">8</div>
-											</div>
-										</dt>
-										<dd>总体&nbsp;&nbsp;&nbsp;</dd>
-										<dt>
-											<div class="progress">
-												<div class="progress-bar progress-bar-danger" aria-valuenow="7" aria-valuemin="0" aria-valuemax="10" style="width: 70%">7</div>
-											</div>
-										</dt>
+										<!-- /loop -->
 									</dl>
-									
-									
 								</div>
 								<div class="clearfix"></div>
 							</div>
-							<div class="testimonials-grids ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
-								<div class="col-md-2 testimonials-grid1 test1 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" style="visibility: visible;">
-									<img src="picture/t1.png" class="img-responsive" alt="">
-								</div>
-								<div class="col-md-7 testimonials-grid  ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" style="visibility: visible;">
-									<h5><a href="">这是器材的标题</a></h5>
-									<p class="statement">这是器材的说明这是器材的说明这是器材的说明这是器材的说明这是器材的说明这是说明这是说明这是材的说明这是说明这是说明这是器材的说明&nbsp;&nbsp;<a href="">>>详细</a></p>
-									<p class="extra">
-										<i class="glyphicon glyphicon-tags"></i><span><b><a href="">标签一</a></b><b><a href="">标签二</a></b><b><a href="">标签三</a></b></span>
-									</p>
-									<p class="extra">
-										<i class="glyphicon glyphicon-eye-open"></i><span>111</span>
-										<i class="glyphicon glyphicon-time"></i><span>2016-9-3 2:29:28</span>
-										<i class="glyphicon glyphicon-th-list"></i><span><b><a href="">这是分类名</a></b></span>
-									</p>
-								</div>
-								<div class="col-md-3 testimonials-grid ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" style="visibility: visible;">
-									<h5>&nbsp;</h5>
-									<dl class="rating">
-										<dd>速度&nbsp;&nbsp;&nbsp;</dd>
-										<dt>
-											<div class="progress">
-												<div class="progress-bar progress-bar-success" aria-valuenow="3" aria-valuemin="0" aria-valuemax="10"  style="width: 30%">3</div>
-											</div>
-										</dt>
-										
-										<dd>自旋&nbsp;&nbsp;&nbsp;</dd>
-										<dt>
-											<div class="progress">
-												<div class="progress-bar progress-bar-warning" aria-valuenow="6" aria-valuemin="0" aria-valuemax="10" style="width: 60%">6</div>
-											</div>
-										</dt>
-										<dd>控制&nbsp;&nbsp;&nbsp;</dd>
-										<dt>
-											<div class="progress">
-												<div class="progress-bar progress-bar-info" aria-valuenow="8" aria-valuemin="0" aria-valuemax="10" style="width: 80%">8</div>
-											</div>
-										</dt>
-										<dd>总体&nbsp;&nbsp;&nbsp;</dd>
-										<dt>
-											<div class="progress">
-												<div class="progress-bar progress-bar-danger" aria-valuenow="7" aria-valuemin="0" aria-valuemax="10" style="width: 70%">7</div>
-											</div>
-										</dt>
-									</dl>
-									
-									
-								</div>
-								<div class="clearfix"></div>
-							</div>
+							<!-- /loop -->
 						</div>
 					</div>
 				</div>
