@@ -557,7 +557,7 @@ class module_control extends phpok_control
 			$this->json(P_Lang('未指定ID'));
 		}
 		$field = $this->get('field');
-		$allowEditField = ['note','index_show','index_show_sort'];
+		$allowEditField = ['note','list_sort','index_show_sort','most_title'];
 		if(!in_array($field, $allowEditField)){
 			$this->json(P_Lang('请求有误'));
 		}
