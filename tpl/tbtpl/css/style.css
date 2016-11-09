@@ -88,6 +88,7 @@ a.navbar-brand {
 	content: attr(data-letters);
 	position: absolute;
 	/*color: #1E1E1E;*/
+    color: #00bbd3;
 	left: 0;
 	overflow: hidden;
 	white-space: nowrap;
@@ -2017,4 +2018,3 @@ a.button {
     width: 90%;
     top: 2em;
 }
-

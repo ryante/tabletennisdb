@@ -360,7 +360,7 @@ table.top_product_list tr.head a {
 
 .panel-title > a{ display: block; font-weight: 700}
 .brand-list{ margin-bottom: 0px;}
-.brand-list th{ width: auto !important; border-bottom:0px !important; background: #77A1B9; color: #fff;}
+.brand-list th{ width: auto !important; border-bottom:0px !important; background: #96bbc0; color: #fff;}
 .brand-list td{ text-align: center; color: #fff; border-top-color:#fff !important; }
 .brand-list td.txtLeft{ text-align: left; color: #7D7D7D;}
 
@@ -377,7 +377,8 @@ table.top_product_list tr.head a {
 .mytable th {  
  color: #4f6b72;  
  border-right: 1px solid #C1DAD7;  
- border-bottom: 1px solid #C1DAD7;  
+ border-left: 1px solid #C1DAD7;
+ border-bottom: 1px solid #C1DAD7;
  border-top: 1px solid #C1DAD7;  
  letter-spacing: 2px;  
  text-transform: uppercase;  

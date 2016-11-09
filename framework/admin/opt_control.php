@@ -117,7 +117,13 @@ class opt_control extends phpok_control
 
 		$this->assign("rslist",$rslist);
 		$this->assign("rs",$rs);
-		$this->view("opt_list");
+		//EDITED 将标签选项输出到特定的模板
+		if($group_id == TAG_GROUP_ID){
+			$this->view("opt_list_tag");
+		} else {
+			$this->view("opt_list");
+		}
+
 	}
 
 	# 添加选项内容
@@ -168,6 +174,7 @@ class opt_control extends phpok_control
 		$title = $this->get("title");
 		$val = $this->get("val");
 		$taxis = $this->get("taxis","int");
+		$clicks = $this->get("clicks","int");
 		if(!$title || $val == "")
 		{
 			exit(P_Lang('显示或值不能为空'));
@@ -177,7 +184,7 @@ class opt_control extends phpok_control
 		{
 			exit(P_Lang('值已存在不允许重复'));
 		}
-		$array = array("title"=>$title,"val"=>$val,"taxis"=>$taxis);
+		$array = array("title"=>$title,"val"=>$val,"taxis"=>$taxis,"clicks"=>$clicks);
 		$this->model('opt')->opt_save($array,$id);
 		exit("ok");
 	}

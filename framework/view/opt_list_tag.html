@@ -1,0 +1,144 @@
+<!-- inc:head -->
+<script type="text/javascript" src="{echo add_js('opt.js')}"></script>
+<div class="tips">
+	您当前的位置：
+	<a href="{echo admin_url('opt')}">选项维护</a>
+	&raquo; <a href="{echo admin_url('opt','list')}&group_id={$group_id}">选项组【<span class="red">{$rs.title}</span>】</a>
+	<!-- $lead_list AS $key=>$value -->
+	&raquo; <a href="{echo admin_url('opt','list')}&pid={$value.id}"><span class="red">{$value.title}</span></a>
+	<!-- end -->
+	&raquo; 内容维护
+</div>
+
+<div class="list">
+<input type="hidden" id="parent_0" value="{$pid}" />
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+	<th class="id">ID</th>
+	<th>值</th>
+	<th>显示</th>
+	<th>点击</th>
+	<th>&nbsp;</th>
+	<th>删除</th>
+</tr>
+<!-- if $popedom.set -->
+<tr>
+	<td class="center">添加</td>
+	<td class="center"><input type="text" id="val_0" class="width120" /></td>
+	<td class="center"><input type="text" id="title_0" class="width120" /></td>
+	<td class="center"><input type="text" id="clicks_0" value="0" class="short center" /></td>
+	<td><input type="button" value="添加" class="btn" onclick="add_opt_tag('{$rs.id}')" /></td>
+	<td class="center" colspan="2">-</td>
+</tr>
+<!-- /if -->
+<!-- loop from=$rslist key=$key value=$value -->
+<tr{if $rslist_id.num%2 == ""} class="list"{/if}>
+	<td class="center">{$value.id}</td>
+	<td class="center"><input type="text" id="val_{$value.id}" value="{$value.val}" class="width120" /></td>
+	<td class="center"><input type="text" id="title_{$value.id}" value="{$value.title}" class="width120" /></td>
+	<td class="center"><input type="text" id="clicks_{$value.id}" value="{$value.clicks}" class="short center" /></td>
+	<td><!-- if $popedom.set --><input type="button" value="更新" class="btn" onclick="update_opt_tag({$value.id})" /><!-- /if --></td>
+	<td class="center"><!-- if $popedom.set --><input type="button" value="删除" class="btn" onclick="delete_opt({$value.id})" /><!-- /if --></td>
+</tr>
+<!-- /foreach -->
+</table>
+</div>
+<!-- inc:pagelist -->
+
+<!-- inc:foot -->
+
+<script>
+	function add_opt_tag(gid)
+	{
+		if(!gid || gid == "0")
+		{
+			alert("未指定选项组！");
+			return false;
+		}
+		var url = base_url+"add&group_id="+gid;
+		//判断是否有父ID
+		var pid = $("#parent_0").val();
+		url += "&pid="+pid;
+		//值
+		var v = $("#val_0").val();
+		if(!v)
+		{
+			alert("值不能为空！");
+			return false;
+		}
+		url += "&val="+$.str.encode(v);
+		//显示
+		var s = $("#title_0").val();
+		if(!s)
+		{
+			alert("显示信息不能为空，您可以设置成与值一样！");
+			return false;
+		}
+		url += "&title="+$.str.encode(s);
+		var taxis = $("#taxis_0").val();
+		if(taxis)
+		{
+			url += "&taxis="+$.str.encode(taxis);
+		}
+		var msg = get_ajax(url);
+		if(msg == "ok")
+		{
+			direct(window.location.href);
+		}
+		else
+		{
+			if(!msg) msg = "内容添加失败！";
+			alert(msg);
+			return false;
+		}
+	}
+
+    function update_opt_tag(id)
+    {
+        if(!id)
+        {
+            alert("操作异常，没有指定要更新的内容ID！");
+            return false;
+        }
+        var url = base_url+"edit&id="+id;
+        //值
+        var v = $("#val_"+id).val();
+        if(!v)
+        {
+            alert("值不能为空！");
+            return false;
+        }
+        url += "&val="+$.str.encode(v);
+        //显示
+        var s = $("#title_"+id).val();
+        if(!s)
+        {
+            alert("显示信息不能为空，您可以设置成与值一样！");
+            return false;
+        }
+        url += "&title="+$.str.encode(s);
+        var taxis = $("#taxis_"+id).val();
+        if(taxis)
+        {
+            url += "&taxis="+$.str.encode(taxis);
+        }
+        //EDITED START 新增点击次数为标签而生
+        var clicks = $("#clicks_"+id).val();
+        if(clicks)
+        {
+            url += "&clicks="+$.str.encode(clicks);
+        }
+        //EDITED END
+        var msg = get_ajax(url);
+        if(msg == "ok")
+        {
+            alert('更新成功');
+        }
+        else
+        {
+            if(!msg) msg = "内容更新失败！";
+            alert(msg);
+            return false;
+        }
+    }
+</script>

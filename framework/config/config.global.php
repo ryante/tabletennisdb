@@ -97,3 +97,6 @@ $config['fav']['note_id'] = 'content';
 
 //后台显示特定模块，让用户可能设置该模块的字段说明
 $config['module']['show_id'] = [74, 75, 76, 77, 78, 79, 80, 81];
+
+//标签组所在的选项组ID
+define('TAG_GROUP_ID',22);

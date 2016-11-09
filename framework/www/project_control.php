@@ -40,6 +40,40 @@ class project_control extends phpok_control
 		$project = $this->call->phpok('_project',array('pid'=>$pid));
 		$this->phpok_seo($project);
 		$this->assign("page_rs",$project);
+
+        //EDITED START 评测排序
+        $globalConfig = $this->config;
+        if(in_array($project['module'],$globalConfig['module']['show_id'])){
+            //评测之最
+            $showMostField = $this->db->get_all("SELECT most_title,identifier FROM tb_module_fields WHERE module_id={$project['module']} AND most_title!=''");//获取后台设置允许显示的字段
+            foreach ($showMostField as $field){
+                $mostList[$field['most_title']] = $this->db->get_one("SELECT l.id,l.title,e.{$field['identifier']} val FROM tb_list l INNER JOIN tb_list_{$project['module']} e on l.id=e.id ORDER BY e.{$field['identifier']} DESC ");
+            }
+            $this->assign("mostList",$mostList);
+
+            //器材品牌分类列表显示的字段
+            $showListField = $this->db->get_all("SELECT list_sort,identifier,title FROM tb_module_fields WHERE module_id={$project['module']} AND list_sort!='' ORDER BY list_sort ASC");//获取后台设置允许显示的字段
+            foreach ($showListField as $listKey => $listField){
+                $showListField[$listKey]['title'] = material_str_replace($listField['title']);
+            }
+            $this->assign("showListField",$showListField);
+
+            // 获取分类列表
+            $cate_list = $this->call->phpok('_catelist',"pid={$project['id']}");
+            $cate_list = $cate_list['sublist'];
+            foreach ($cate_list as $cateKey => $cateVal){
+                $listSet = $this->db->get_all("SELECT l.id,l.title,e.* FROM tb_list l INNER JOIN tb_list_{$project['module']} e on l.id=e.id where l.project_id='{$project[id]}' AND l.module_id='{$project[module]}' AND l.cate_id={$cateKey}");//取出每个分类的器材列表
+                $cate_list[$cateKey]['list'] = $listSet;
+
+            }
+            $this->assign("cateList",$cate_list);
+
+			//热门标签
+			$hotTags = $this->db->get_all("SELECT title,val,clicks FROM tb_opt WHERE group_id=".TAG_GROUP_ID." ORDER BY clicks DESC ");
+            $this->assign("hotTags",$hotTags);
+		}
+        //EDITED END
+
 		if($project['parent_id']){
 			$parent_rs = $this->call->phpok('_project',array('pid'=>$project['parent_id']));
 			if(!$parent_rs || !$parent_rs['status']){
@@ -47,6 +81,7 @@ class project_control extends phpok_control
 			}
 			$this->assign("parent_rs",$parent_rs);
 		}
+
 		if($project["module"]){
 			$this->load_module($project,$parent_rs);
 		}else{
@@ -86,6 +121,7 @@ class project_control extends phpok_control
 		if(!$m_rs || $m_rs["status"] != 1){
 			error(P_Lang('模块不存在或未启用'),"","error");
 		}
+
 		$this->assign("m_rs",$m_rs);
 		$cate_root = $rs["cate"];
 		$cateid = 0;
@@ -116,10 +152,11 @@ class project_control extends phpok_control
 		$tplfile = $rs["tpl_list"];
 		$psize = $rs["psize"] ? $rs['psize'] : $this->config['psize'];
 		$pageurl = $this->url($rs['identifier']);
+
 		if($cate_root){
 			if($cateid && $cateid != $cate_root){
 				$cate_rs = $this->call->phpok('_cate',array('pid'=>$rs['id'],'cateid'=>$cateid));
-				if(!$cate_rs || !$cate_rs['status']){
+                if(!$cate_rs || !$cate_rs['status']){
 					error(P_Lang('分类已停用，请联系管理员'),'','error');
 				}
 				$this->assign('cate_rs',$cate_rs);
@@ -224,6 +261,7 @@ class project_control extends phpok_control
 		if($attr){
 			$dt['attr'] = $attr;
 		}
+
 		$info = $this->call->phpok('_arclist',$dt);
 		unset($dt);
 		$this->assign("pageid",$pageid);

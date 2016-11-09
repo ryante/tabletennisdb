@@ -33,7 +33,7 @@ $(document).ready(function(){
 	<th class="lft">备注</th>
 </tr>
 <!-- foreach($used_list AS $key=>$value) -->
-	{if $value.identifier!='price' && $value.identifier!='thumb' && $value.identifier!='content' && $value.identifier!='label' }
+	{if $value.identifier!='thumb' && $value.identifier!='content' && $value.identifier!='label' }
 		<tr{if $used_list_id.num%2 == ""} class="list"{/if}>
 			<td>{$value.identifier}</td>
 			<td>{$value.title}</td>

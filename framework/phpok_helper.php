@@ -1000,4 +1000,11 @@ function token_userid()
 	}
 	return $GLOBALS['app']->lib('token')->encode($info);
 }
+
+
+//EDITED 替换某些关键字
+function material_str_replace($str){
+	$result = str_replace(['用户评估的','制造商标明的','(1-10)','(1-100)','制造商的','用户的'],'',$str);
+	return $result;
+}
 ?>

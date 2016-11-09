@@ -96,7 +96,7 @@ class index_control extends phpok_control
 			$cate = $this->db->get_one("SELECT id,title,identifier FROM tb_cate WHERE id={$value['cate_id']}");//分类信息
 			$hotMaterial[$key]['cate'] = $cate;
 
-			$showField = $this->db->get_all("SELECT * FROM tb_module_fields WHERE module_id={$value['module_id']} AND index_show=1 ORDER BY index_show_sort ASC limit 4");//器材所对应的模块允许显示的前四个字段名称及标识
+			$showField = $this->db->get_all("SELECT * FROM tb_module_fields WHERE module_id={$value['module_id']} AND (index_show_sort!=0 or index_show_sort!='')  ORDER BY index_show_sort ASC limit 4");//器材所对应的模块允许显示的前四个字段名称及标识
 
             $field = '';
 			$property = '';
@@ -104,7 +104,7 @@ class index_control extends phpok_control
 				foreach ($showField as $k => $v){
 					if($v['identifier']){
 						$field[] = $v['identifier'];
-                        $v['title'] =  str_replace(['用户评估的','制造商标明的','(1-10)','(1-100)','制造商的','用户的'],'',$v['title']);
+                        $v['title'] =  material_str_replace($v['title']);
 						$property[$v['identifier']]['title'] = $v['title'];
                         switch ($k){
                             case '0':
