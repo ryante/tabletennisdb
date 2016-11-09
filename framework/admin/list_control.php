@@ -780,6 +780,17 @@ class list_control extends phpok_control
 				$tmplist[$value["identifier"]] = $this->lib('form')->get($value);
 			}
 			$this->model('list')->save_ext($tmplist,$p_rs["module"]);
+
+            //将标签同步到新表tb_list_bind_label,方便前端调用
+            $labels = $this->get('label');
+            if(!empty($labels)){
+                $this->db->delete('tb_list_bind_label',"lid={$id}");
+                foreach ($labels as $label){
+                    $labelRecord = ['lid'=>$id, 'label'=>$label];
+                    $this->db->insert_array($labelRecord,"tb_list_bind_label");
+                }
+            }
+
 		}
 		//保存内容扩展字段
 		if($tmpadd){
@@ -806,6 +817,7 @@ class list_control extends phpok_control
 			$this->json(P_Lang('您没有权限执行此操作'));
 		}
 		foreach($idlist AS $key=>$value){
+            $this->db->delete('tb_list_bind_label',"lid={$value}");
 			$value = intval($value);
 			$this->model('list')->delete($value);
 		}

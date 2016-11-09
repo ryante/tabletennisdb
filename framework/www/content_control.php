@@ -137,6 +137,19 @@ class content_control extends phpok_control
 		if(!$tpl){
 			$this->eror(P_Lang('未配置相应的模板'));
 		}
+
+		//EDITED START
+		$globalConfig = $this->config;
+		if(in_array($project['module'],$globalConfig['module']['show_id'])){
+			//推荐文章
+			
+
+			//热门标签
+			$hotTags = $this->db->get_all("SELECT title,val,clicks FROM tb_opt WHERE group_id=".TAG_GROUP_ID." ORDER BY clicks DESC ");
+			$this->assign("hotTags",$hotTags);
+		}
+		//EDITED END
+
 		$this->model('list')->add_hits($rs["id"]);
 		$rs['hits'] = $this->model('list')->get_hits($rs['id']);
 		$this->phpok_seo($rs);
