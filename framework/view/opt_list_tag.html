@@ -34,7 +34,7 @@
 <!-- loop from=$rslist key=$key value=$value -->
 <tr{if $rslist_id.num%2 == ""} class="list"{/if}>
 	<td class="center">{$value.id}</td>
-	<td class="center"><input type="text" id="val_{$value.id}" value="{$value.val}" class="width120" /></td>
+	<td class="center"><input type="text" id="val_{$value.id}" value="{$value.val}" disabled class="width120" /></td>
 	<td class="center"><input type="text" id="title_{$value.id}" value="{$value.title}" class="width120" /></td>
 	<td class="center"><input type="text" id="clicks_{$value.id}" value="{$value.clicks}" class="short center" /></td>
 	<td><!-- if $popedom.set --><input type="button" value="更新" class="btn" onclick="update_opt_tag({$value.id})" /><!-- /if --></td>

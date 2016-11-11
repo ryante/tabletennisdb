@@ -1,0 +1,14 @@
+
+<div class="page wow fadeInUpBig animated" data-wow-delay="0.4s">
+	<nav>
+		<ul class="pagination">
+            <!-- loop from=$pagelist key=$key value=$value -->
+            {if $value.status}
+            <li class="active"><a href="{$value.url}">{$value.title} <span class="sr-only">(current)</span></a></li>
+            {else}
+            <li><a href="{$value.url}" title="{$value.title}" {if $value.nolink}class="disabled"{/if}>{$value.title}</a></li>
+            {/if}
+            <!-- /loop -->
+		</ul>
+	</nav>
+</div>

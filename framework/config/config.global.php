@@ -100,3 +100,6 @@ $config['module']['show_id'] = [74, 75, 76, 77, 78, 79, 80, 81];
 
 //标签组所在的选项组ID
 define('TAG_GROUP_ID',22);
+
+//评测所在的模块ID
+define('ARTICLE_MODULE_ID',22);

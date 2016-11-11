@@ -786,7 +786,8 @@ class list_control extends phpok_control
             if(!empty($labels)){
                 $this->db->delete('tb_list_bind_label',"lid={$id}");
                 foreach ($labels as $label){
-                    $labelRecord = ['lid'=>$id, 'label'=>$label];
+                    $labelName = $this->db->get_one("SELECT title FROM tb_opt WHERE group_id=" . TAG_GROUP_ID . " AND val='{$label}'");
+                    $labelRecord = ['lid'=>$id, 'label'=>$label, 'label_name'=>$labelName['title']];
                     $this->db->insert_array($labelRecord,"tb_list_bind_label");
                 }
             }

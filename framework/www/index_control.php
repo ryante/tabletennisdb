@@ -137,7 +137,7 @@ class index_control extends phpok_control
 
 			$labels = unserialize($fieldValue['label']);
 			foreach ($labels as $label){
-				$rs = $this->db->get_one("SELECT title FROM tb_opt WHERE group_id=22 AND val={$label}");//查询出其对应的标签名,关联到的group_id为固定值=>22
+				$rs = $this->db->get_one("SELECT title FROM tb_opt WHERE group_id=".TAG_GROUP_ID." AND val='{$label}'");//查询出其对应的标签名,关联到的group_id为固定值=>22
 				$labelName = $rs['title'];
 				$hotMaterial[$key]['label'][$label] = $labelName;
 			}

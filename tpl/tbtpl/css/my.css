@@ -454,3 +454,5 @@ table.top_product_list tr.head a {
 .Focus{ float: left; width: 100%; height: 30px; text-align: left; line-height: 30px;   color: #FFB82A; }
 .Error{ float: left; width: 100%; height: 30px; text-align: left; line-height: 30px;  color: #FF7144; }
 .Success{ float: left; width: 100%; height: 30px; text-align: left; line-height: 30px;   color: #4BCDD9; }
+
+.more-resource .btn_news_more,.more-resource .btn_news_more a{ width: 100%;}

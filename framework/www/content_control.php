@@ -141,8 +141,62 @@ class content_control extends phpok_control
 		//EDITED START
 		$globalConfig = $this->config;
 		if(in_array($project['module'],$globalConfig['module']['show_id'])){
+            //将器材内容分成两部分
+            $content1 = mb_substr($rs['content'],0,200,'utf-8');
+            $content2 = mb_substr($rs['content'],200,mb_strlen($rs['content']),'utf-8');
+            $rs['content'] = '';
+            $rs['content']['first'] = $content1;
+            $rs['content']['last'] = $content2;
+
+
 			//推荐文章
-			
+            if(!empty($rs['label'])){
+                $labelStr = "'" . implode("','",array_keys($rs['label'])) . "'";
+            }
+            $count = $this->db->get_one("SELECT count(l.id) total FROM tb_list_bind_label t INNER JOIN tb_list l ON t.lid=l.id INNER JOIN tb_list_" . ARTICLE_MODULE_ID . " e on l.id=e.id WHERE t.label IN ({$labelStr})   AND l.module_id=" .ARTICLE_MODULE_ID. " ORDER BY l.dateline");
+            $total = $count['total'];
+
+            if($total>0){
+                $pageid = $this->get($this->config["pageid"],"int");
+                $psize = 2;
+                if(!$pageid) $pageid = 1;
+                $offset = ($pageid-1) * $psize;
+
+                //找出与器材有相同标签的评测
+                $lidResults = $this->db->get_all("SELECT lid FROM tb_list_bind_label WHERE label IN ({$labelStr})");
+                foreach ($lidResults as $lidValue){
+                   $lidArr[] = $lidValue['lid'];
+                }
+                $lid = implode(',',$lidArr);
+
+                //根据lid找出相关的评测内容
+                $articles = $this->db->get_all("SELECT l.*,e.* FROM tb_list l  INNER JOIN tb_list_" . ARTICLE_MODULE_ID . " e on l.id=e.id WHERE l.id IN ({$lid})  AND l.module_id=" .ARTICLE_MODULE_ID. " ORDER BY l.dateline DESC limit $offset,$psize ");
+                if(!empty($articles)){
+                    foreach ($articles as $arcKey => $article){
+                        $arcLabels = $this->db->get_all("SELECT * FROM tb_list_bind_label WHERE lid={$article['id']}");
+                        $articles[$arcKey]['labels'] = $arcLabels;
+                    }
+                }
+
+
+                if($this->get('ajax')){
+                    if(!empty($articles)){
+                        $result = ['status'=>'ok','content'=>$articles];
+                    } else {
+                        $result = ['status'=>'error','content'=>'已加载完所有资源'];
+                    }
+                    echo json_encode($result);
+                    exit();
+                }
+
+                $pageurl = $this->url('news') . "pageid={$pageid}";
+                $string = 'home='.P_Lang('首页').'&prev='.P_Lang('上一页').'&next='.P_Lang('下一页').'&last='.P_Lang('尾页').'&half=5';
+                $string.= '&add='.P_Lang('数量：').'(total)/(psize)'.P_Lang('，').P_Lang('页码：').'(num)/(total_page)&always=1';
+                $pagelist = phpok_page($pageurl,$total,$pageid,$psize,$string);
+
+                $this->assign("articles",$articles);
+                $this->assign("pagelist",$pagelist);
+            }
 
 			//热门标签
 			$hotTags = $this->db->get_all("SELECT title,val,clicks FROM tb_opt WHERE group_id=".TAG_GROUP_ID." ORDER BY clicks DESC ");
@@ -193,5 +247,45 @@ class content_control extends phpok_control
 		}
 		return $rs;
 	}
+
+    public function ajax_article_format($articles){
+        foreach ($articles as $article){
+            $user = $article['user_id'] == 0 ? '管理员' :  $article['user_id'];
+            $content = mb_substr($articles['content'],0,120,'utf-8');
+
+            $label = '';
+            foreach ($article['labels'] as $value){
+                $label .= "<a href='index.php?label=".$value['label']."' >".$value['label_name']."</a>&nbsp;&nbsp;";
+            }
+
+            $result[] = "<li class='wow fadeInLeft animated animated' data-wow-delay='0.4s'>
+										<div class='news_time fl'>
+											<span class='day'>".date('d',$article['dateline'])."</span>
+											<span class='year'>".date('Y-m',$article['dateline'])."</span>
+											<span class='author'>".$user."</span>
+										</div>
+										<div class='news_cont fr'>
+											<h2>
+											<a href='index.php?id=".$article['id']."'>".$article['title']."</a>
+											</h2>
+											<p class='demo'>
+												<a href='index.php?id=".$article['id']."'>
+                                                    ".$content."
+                                                </a>
+											</p>
+											<p class='vis'>
+												<div  class='btn_news_more' >
+													<a href='index.php?id=".$article['id']."' title='".$article['title']."' class='btn'>查看详细</a>
+												</div>
+												<i class='glyphicon glyphicon-eye-open'></i> &nbsp;&nbsp;".$article['hits']." &nbsp;&nbsp;&nbsp;&nbsp;
+												<i class='glyphicon glyphicon-time'></i>&nbsp;&nbsp;".date('H:i:s',$article['dateline'])."&nbsp;&nbsp;&nbsp;&nbsp;
+												<i class='glyphicon glyphicon-tags'></i>&nbsp;&nbsp;
+                                                ".$label.";
+											</p>
+										</div>
+									</li>";
+        }
+        return $result;
+    }
 }
 ?>

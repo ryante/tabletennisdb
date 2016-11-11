@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50538
 File Encoding         : 65001
 
-Date: 2016-11-09 19:47:20
+Date: 2016-11-11 18:06:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -790,7 +790,7 @@ CREATE TABLE `tb_list` (
 -- Records of tb_list
 -- ----------------------------
 INSERT INTO `tb_list` VALUES ('1773', '0', '0', '21', '41', '1', '标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 标题一 ', '1472993754', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', 'index-banner');
-INSERT INTO `tb_list` VALUES ('1775', '0', '587', '74', '392', '1', '品牌一反胶套胶一', '1475044561', '0', '1', '0', '20', '', '', '', '', '反胶 套胶', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1775', '0', '587', '74', '392', '1', '品牌一反胶套胶一', '1475044561', '0', '1', '0', '54', '', '', '', '', '反胶 套胶', '', '0', '0', '');
 INSERT INTO `tb_list` VALUES ('1373', '0', '68', '22', '43', '1', '来自工程师的8项Web性能提升建议', '1424920049', '0', '1', '0', '60', '', '', '', '', '', 'h', '1458699466', '0', '');
 INSERT INTO `tb_list` VALUES ('1368', '0', '8', '22', '43', '1', 'EverEdit - 值得关注的代码编辑器', '1424912045', '0', '1', '0', '26', '', '', '', '', '', '', '0', '0', '');
 INSERT INTO `tb_list` VALUES ('1369', '0', '8', '22', '43', '1', '金山 WPS - 免费正版办公软件(支持Win/Linux/手机)', '1424916504', '0', '1', '0', '20', '', '', '', '', '', '', '0', '0', '');
@@ -801,8 +801,8 @@ INSERT INTO `tb_list` VALUES ('1381', '0', '68', '22', '43', '1', '科技进步�
 INSERT INTO `tb_list` VALUES ('1382', '0', '68', '22', '43', '1', '站点采用HTTPS协议的利弊分析、及SEO建议', '1433723870', '0', '1', '0', '151', '', '', '', '', '自检清单 必应 谷歌', '', '1449565454', '0', '');
 INSERT INTO `tb_list` VALUES ('1423', '0', '68', '22', '43', '1', '日本东京2020年奥运会主会场使用ETFE膜', '1398700800', '0', '1', '0', '511', '', '', '', '', '', '', '0', '0', '');
 INSERT INTO `tb_list` VALUES ('1424', '0', '68', '22', '43', '1', 'PTFE膜材', '1402329600', '0', '1', '0', '469', '', '', '', '', '', '', '0', '0', '');
-INSERT INTO `tb_list` VALUES ('1789', '0', '587', '74', '392', '1', '品牌一反胶套胶二', '1476324375', '4', '1', '0', '1', '', '', '', '', '', 'h', '0', '0', '');
-INSERT INTO `tb_list` VALUES ('1790', '0', '588', '74', '392', '1', '品牌二反胶套胶一', '1476324448', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1789', '0', '587', '74', '392', '1', '品牌一反胶套胶二', '1476324375', '4', '1', '0', '5', '', '', '', '', '', 'h', '0', '0', '');
+INSERT INTO `tb_list` VALUES ('1790', '0', '588', '74', '392', '1', '品牌二反胶套胶一', '1476324448', '0', '1', '0', '9', '', '', '', '', '', '', '0', '0', '');
 INSERT INTO `tb_list` VALUES ('1791', '0', '588', '74', '392', '1', '品牌二反胶套胶二', '1476324515', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
 INSERT INTO `tb_list` VALUES ('1792', '0', '590', '75', '391', '1', '品牌一正胶套胶', '1476325157', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
 INSERT INTO `tb_list` VALUES ('1793', '0', '590', '75', '391', '1', '品牌一正胶套胶二', '1476325234', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '');
@@ -1184,7 +1184,7 @@ CREATE TABLE `tb_list_74` (
 -- ----------------------------
 -- Records of tb_list_74
 -- ----------------------------
-INSERT INTO `tb_list_74` VALUES ('1775', '1', '392', '587', '30', '1048', '3', '5', '6', '5', '6', '8', '9', '9', '5', '6', '6', '7', '8', '1', '1', '8', '9', '反胶套胶一的内容反胶套胶一的内容反胶套胶一的内容反胶套胶一的内容反胶套胶一的内容反胶套胶一的内容反胶套胶一的内容反胶套胶一的内容', 'a:4:{i:0;s:7:\"label_2\";i:1;s:7:\"label_3\";i:2;s:7:\"label_4\";i:3;s:7:\"label_5\";}');
+INSERT INTO `tb_list_74` VALUES ('1775', '1', '392', '587', '30', '1048', '3', '5', '6', '5', '6', '8', '9', '9', '5', '6', '6', '7', '8', '1', '1', '8', '9', '非常抱歉，让各位久等了，微信公众平台开发视频教程这次是真的来了，而且会逐渐覆盖所有内容。按计划，视频教程将会分为三个部分：基础入门、高手进阶和项目实战。目前正在抓紧录制基础入门部分的视频，每录制一集我会及时发布出来，有兴趣的读者可以同步学习。\n\n	下面是微信公众平台开发视频教程基础入门部分的课程大纲，共38个课时，每节课专注于一个知识点。\n		1 移动APP的发展趋势免费\n		2 微信公众平台介绍免费\n		3 编辑模式的使用免费\n		4 案例：基于编辑模式开发“生活娱乐助手”\n		5 开发模式下的消息处理流程\n		6 微信公众平台开发环境搭建\n		7 如何启用开发模式\n		8 SAE的基本使用\n		9 dom4j的使用\n		10 Xstream的使用\n		11 消息及消息处理工具的封装\n		12 各类消息的接收与响应\n		13 SAE上MySQL的使用\n		14 SAE上日志的记录与查看\n		15 案例：签到\n		16 文本消息的内容长度限制\n		17 文本消息中使用网页超链接\n		18 表情飘落效果的实现\n		19 QQ表情的使用\n		20 符号表情的使用\n		21 回复音乐消息\n		22 图文消息的使用详解\n		23 如何在本地开发调试（1）\n		24 如何在本地开发调试（2）\n		25 消息加解密\n		26 自定义菜单开发——如何发起https请求\n		27 自定义菜单开发——获取access_token\n		28 自定义菜单开发——创建菜单\n		29 自定义菜单开发——菜单的查询与删除\n		30 案例：人脸识别\n		31 Gson框架的使用\n		32 案例：天气预报（文字版）\n		33 案例：天气预报（图文版）\n		34 微信区的申请与接入\n		35 如何在公众号上实现2048游戏\n		36 微网站开发——基础知识\n		37 微网站开发——jQuery Mobile入门\n		38 案例：BMI计算器\n\n	视频教程发布在CSDN在线教育平台上，地址：http://edu.csdn.net/course/detail/282。很抱歉我对视频采取了象征性地收费，好在收费并不多，基础入门部分400C币（人民币20元）。这样做可能对双方都比较负责，付费学员所付费用虽然不多，但是会更珍惜所购买的课程；有学员付费了也会给我压力和动力，促使我持续推出更优质的视频教程。\n	谢谢支持与理解！', 'a:4:{i:0;s:7:\"label_2\";i:1;s:7:\"label_3\";i:2;s:7:\"label_4\";i:3;s:7:\"label_5\";}');
 INSERT INTO `tb_list_74` VALUES ('1789', '1', '392', '587', '10', '1048', '1', '2', '3', '4', '5', '6', '7', '8', '9', '7', '7', '8', '6', '1', '1', '8', '9', '这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明', 'a:3:{i:0;s:7:\"label_2\";i:1;s:7:\"label_5\";i:2;s:7:\"label_6\";}');
 INSERT INTO `tb_list_74` VALUES ('1790', '1', '392', '588', '56', '1048', '1', '2', '3', '4', '5', '6', '7', '8', '9', '5', '6', '7', '8', '1', '1', '10', '9', '这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明', 'a:4:{i:0;s:7:\"label_1\";i:1;s:7:\"label_3\";i:2;s:7:\"label_4\";i:3;s:7:\"label_6\";}');
 INSERT INTO `tb_list_74` VALUES ('1791', '1', '392', '588', '78', '1048', '9', '8', '7', '6', '5', '4', '3', '2', '1', '2', '7', '8', '9', '1', '1', '8', '7', '这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明这里是内容说明', 'a:2:{i:0;s:7:\"label_3\";i:1;s:7:\"label_4\";}');
@@ -1472,142 +1472,143 @@ CREATE TABLE `tb_list_bind_label` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `lid` int(11) NOT NULL COMMENT '对应tb_list 表里面的id',
   `label` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `label_name` varchar(255) NOT NULL COMMENT '标签名',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=151 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=163 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of tb_list_bind_label
 -- ----------------------------
-INSERT INTO `tb_list_bind_label` VALUES ('18', '1820', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('17', '1820', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('16', '1820', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('15', '1820', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('21', '1775', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('20', '1775', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('19', '1775', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('22', '1775', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('23', '1789', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('24', '1789', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('25', '1789', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('26', '1791', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('27', '1791', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('28', '1790', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('29', '1790', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('30', '1790', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('31', '1790', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('32', '1795', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('33', '1795', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('34', '1795', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('35', '1794', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('36', '1794', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('37', '1794', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('38', '1793', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('39', '1793', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('40', '1793', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('41', '1792', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('42', '1792', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('43', '1799', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('44', '1799', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('45', '1798', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('46', '1798', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('47', '1798', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('48', '1798', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('49', '1797', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('50', '1797', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('51', '1797', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('52', '1796', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('53', '1796', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('54', '1803', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('55', '1803', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('56', '1803', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('57', '1803', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('58', '1802', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('59', '1802', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('60', '1801', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('61', '1801', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('62', '1801', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('63', '1800', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('64', '1800', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('65', '1800', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('66', '1807', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('67', '1807', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('68', '1807', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('69', '1806', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('70', '1806', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('71', '1805', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('72', '1805', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('73', '1805', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('74', '1804', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('75', '1804', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('76', '1811', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('77', '1811', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('78', '1811', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('79', '1810', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('80', '1810', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('81', '1810', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('82', '1809', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('83', '1809', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('84', '1809', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('90', '1808', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('89', '1808', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('88', '1808', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('91', '1815', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('92', '1815', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('93', '1815', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('94', '1814', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('95', '1814', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('96', '1814', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('97', '1813', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('98', '1813', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('99', '1813', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('100', '1812', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('101', '1812', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('102', '1812', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('103', '1819', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('104', '1819', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('110', '1818', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('109', '1818', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('108', '1818', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('111', '1817', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('112', '1817', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('113', '1817', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('114', '1816', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('115', '1382', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('116', '1382', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('117', '1382', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('118', '1382', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('119', '1381', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('120', '1381', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('121', '1381', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('122', '1373', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('123', '1373', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('124', '1373', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('125', '1373', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('126', '1372', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('127', '1372', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('128', '1372', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('129', '1372', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('130', '1371', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('131', '1371', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('132', '1371', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('133', '1371', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('134', '1370', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('135', '1370', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('136', '1370', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('137', '1370', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('138', '1369', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('139', '1369', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('140', '1369', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('141', '1368', 'label_1');
-INSERT INTO `tb_list_bind_label` VALUES ('142', '1368', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('143', '1368', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('144', '1368', 'label_6');
-INSERT INTO `tb_list_bind_label` VALUES ('145', '1424', 'label_2');
-INSERT INTO `tb_list_bind_label` VALUES ('146', '1424', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('147', '1424', 'label_4');
-INSERT INTO `tb_list_bind_label` VALUES ('148', '1423', 'label_3');
-INSERT INTO `tb_list_bind_label` VALUES ('149', '1423', 'label_5');
-INSERT INTO `tb_list_bind_label` VALUES ('150', '1423', 'label_6');
+INSERT INTO `tb_list_bind_label` VALUES ('18', '1820', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('17', '1820', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('16', '1820', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('15', '1820', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('162', '1775', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('161', '1775', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('160', '1775', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('159', '1775', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('23', '1789', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('24', '1789', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('25', '1789', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('26', '1791', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('27', '1791', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('28', '1790', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('29', '1790', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('30', '1790', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('31', '1790', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('32', '1795', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('33', '1795', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('34', '1795', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('35', '1794', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('36', '1794', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('37', '1794', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('38', '1793', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('39', '1793', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('40', '1793', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('41', '1792', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('42', '1792', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('43', '1799', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('44', '1799', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('45', '1798', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('46', '1798', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('47', '1798', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('48', '1798', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('49', '1797', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('50', '1797', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('51', '1797', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('52', '1796', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('53', '1796', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('54', '1803', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('55', '1803', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('56', '1803', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('57', '1803', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('58', '1802', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('59', '1802', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('60', '1801', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('61', '1801', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('62', '1801', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('63', '1800', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('64', '1800', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('65', '1800', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('66', '1807', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('67', '1807', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('68', '1807', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('69', '1806', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('70', '1806', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('71', '1805', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('72', '1805', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('73', '1805', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('74', '1804', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('75', '1804', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('76', '1811', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('77', '1811', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('78', '1811', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('79', '1810', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('80', '1810', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('81', '1810', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('82', '1809', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('83', '1809', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('84', '1809', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('90', '1808', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('89', '1808', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('88', '1808', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('91', '1815', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('92', '1815', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('93', '1815', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('94', '1814', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('95', '1814', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('96', '1814', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('97', '1813', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('98', '1813', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('99', '1813', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('100', '1812', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('101', '1812', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('102', '1812', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('103', '1819', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('104', '1819', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('110', '1818', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('109', '1818', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('108', '1818', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('111', '1817', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('112', '1817', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('113', '1817', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('114', '1816', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('152', '1382', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('151', '1382', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('119', '1381', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('120', '1381', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('121', '1381', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('122', '1373', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('123', '1373', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('124', '1373', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('125', '1373', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('126', '1372', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('127', '1372', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('128', '1372', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('129', '1372', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('130', '1371', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('131', '1371', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('132', '1371', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('133', '1371', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('134', '1370', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('135', '1370', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('136', '1370', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('137', '1370', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('138', '1369', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('139', '1369', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('140', '1369', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('141', '1368', 'label_1', '标签一a');
+INSERT INTO `tb_list_bind_label` VALUES ('142', '1368', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('143', '1368', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('144', '1368', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('145', '1424', 'label_2', '标签二标签');
+INSERT INTO `tb_list_bind_label` VALUES ('146', '1424', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('147', '1424', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('148', '1423', 'label_3', '标签三标签');
+INSERT INTO `tb_list_bind_label` VALUES ('149', '1423', 'label_5', '标签五标');
+INSERT INTO `tb_list_bind_label` VALUES ('150', '1423', 'label_6', '标签六标签六');
+INSERT INTO `tb_list_bind_label` VALUES ('153', '1382', 'label_4', '标签标签');
+INSERT INTO `tb_list_bind_label` VALUES ('154', '1382', 'label_5', '标签五标');
 
 -- ----------------------------
 -- Table structure for tb_list_biz
@@ -1947,7 +1948,7 @@ CREATE TABLE `tb_opt` (
   `clicks` int(10) NOT NULL COMMENT '点击次数为标签而生',
   PRIMARY KEY (`id`),
   KEY `group_id` (`group_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=102 DEFAULT CHARSET=utf8 COMMENT='表单列表选项';
+) ENGINE=MyISAM AUTO_INCREMENT=103 DEFAULT CHARSET=utf8 COMMENT='表单列表选项';
 
 -- ----------------------------
 -- Records of tb_opt
@@ -1969,7 +1970,7 @@ INSERT INTO `tb_opt` VALUES ('17', '4', '0', '有', '1', '10', '0');
 INSERT INTO `tb_opt` VALUES ('18', '4', '0', '没有', '0', '20', '0');
 INSERT INTO `tb_opt` VALUES ('21', '6', '0', '当前窗口', '_self', '10', '0');
 INSERT INTO `tb_opt` VALUES ('22', '6', '0', '新窗口', '_blank', '20', '0');
-INSERT INTO `tb_opt` VALUES ('94', '22', '0', '标签一', 'label_1', '0', '330');
+INSERT INTO `tb_opt` VALUES ('94', '22', '0', '标签一a', 'label_1', '0', '220');
 INSERT INTO `tb_opt` VALUES ('78', '17', '0', '其它', '5', '255', '0');
 INSERT INTO `tb_opt` VALUES ('77', '17', '0', '44', '4', '255', '0');
 INSERT INTO `tb_opt` VALUES ('62', '12', '0', '不置顶', '', '10', '0');
