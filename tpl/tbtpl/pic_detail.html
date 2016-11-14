@@ -151,7 +151,7 @@
 											</h2>
 											<p class="demo">
 												<a href="index.php?id={$value.id}">
-                                                    {func phpok_cut $value.content 120 …}
+                                                    {func phpok_cut $value.note 120 …}
                                                 </a>
 											</p>
 											<p class="vis">
@@ -172,7 +172,8 @@
 							</div>
                         <div class="more-resource wow fadeInUpBig animated" data-wow-delay="0.4s">
                             <div  class="btn_news_more" >
-                                <a href="javascript:void(0)" onclick="getArticle({$rs.id},{$pageid+1})" class="btn">加载更多</a>
+                                <input type="hidden" id="pageid" value="{$pageid+1}">
+                                <a href="javascript:void(0)" onclick="getArticle({$rs.id})" class="btn" id="loadMore">加载更多</a>
                             </div>
                         </div>
 						</div>
@@ -198,13 +199,24 @@
 				</div>
 				<!--about-->
             <script>
-                function getArticle(id,pageid) {
+                function getArticle(id) {
+                    var pageid = parseFloat($('#pageid').val());
                     $.ajax({
                         type: "get",
                         url: "index.php?c=content&f=index&ajax=1&id="+id+"&pageid="+pageid,
                         dataType: "json",
-                        success: function(data) {//
-                            $("#recommendArticle").append(data);
+                        success: function(data) {
+                            if(data.status == 'ok'){
+                                $("#recommendArticle").append(data.content);
+                                $('#pageid').val(pageid + 1);
+                            } else {
+                                alert(data.content);
+                                $('#loadMore').html(data.content);
+                                $('#loadMore').attr('disabled',true);
+                                $('#loadMore').css('cursor','default');
+                                $('#loadMore').css('color','#00bbd3');
+                            }
+
                         }
                    })
                 }

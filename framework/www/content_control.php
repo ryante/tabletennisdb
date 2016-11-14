@@ -178,9 +178,9 @@ class content_control extends phpok_control
                     }
                 }
 
-
                 if($this->get('ajax')){
                     if(!empty($articles)){
+                        $articles = $this->ajax_article_format($articles);
                         $result = ['status'=>'ok','content'=>$articles];
                     } else {
                         $result = ['status'=>'error','content'=>'已加载完所有资源'];
@@ -249,41 +249,17 @@ class content_control extends phpok_control
 	}
 
     public function ajax_article_format($articles){
+
+        $result = '';
         foreach ($articles as $article){
             $user = $article['user_id'] == 0 ? '管理员' :  $article['user_id'];
-            $content = mb_substr($articles['content'],0,120,'utf-8');
+            $content = mb_substr($article['note'],0,120,'utf-8');
 
             $label = '';
             foreach ($article['labels'] as $value){
                 $label .= "<a href='index.php?label=".$value['label']."' >".$value['label_name']."</a>&nbsp;&nbsp;";
             }
-
-            $result[] = "<li class='wow fadeInLeft animated animated' data-wow-delay='0.4s'>
-										<div class='news_time fl'>
-											<span class='day'>".date('d',$article['dateline'])."</span>
-											<span class='year'>".date('Y-m',$article['dateline'])."</span>
-											<span class='author'>".$user."</span>
-										</div>
-										<div class='news_cont fr'>
-											<h2>
-											<a href='index.php?id=".$article['id']."'>".$article['title']."</a>
-											</h2>
-											<p class='demo'>
-												<a href='index.php?id=".$article['id']."'>
-                                                    ".$content."
-                                                </a>
-											</p>
-											<p class='vis'>
-												<div  class='btn_news_more' >
-													<a href='index.php?id=".$article['id']."' title='".$article['title']."' class='btn'>查看详细</a>
-												</div>
-												<i class='glyphicon glyphicon-eye-open'></i> &nbsp;&nbsp;".$article['hits']." &nbsp;&nbsp;&nbsp;&nbsp;
-												<i class='glyphicon glyphicon-time'></i>&nbsp;&nbsp;".date('H:i:s',$article['dateline'])."&nbsp;&nbsp;&nbsp;&nbsp;
-												<i class='glyphicon glyphicon-tags'></i>&nbsp;&nbsp;
-                                                ".$label.";
-											</p>
-										</div>
-									</li>";
+            $result .= "<li class='wow fadeInLeft animated animated' data-wow-delay='0.4s'><div class='news_time fl'><span class='day'>".date('d',$article['dateline'])."</span><span class='year'>".date('Y-m',$article['dateline'])."</span><span class='author'>".$user."</span></div><div class='news_cont fr'><h2><a href='index.php?id=".$article['id']."'>".$article['title']."</a></h2><p class='demo'><a href='index.php?id=".$article['id']."'>".$content."</a></p><p class='vis'><div  class='btn_news_more' ><a href='index.php?id=".$article['id']."' title='".$article['title']."' class='btn'>查看详细</a></div><i class='glyphicon glyphicon-eye-open'></i> &nbsp;&nbsp;".$article['hits']." &nbsp;&nbsp;&nbsp;&nbsp;<i class='glyphicon glyphicon-time'></i>&nbsp;&nbsp;".date('H:i:s',$article['dateline'])."&nbsp;&nbsp;&nbsp;&nbsp;<i class='glyphicon glyphicon-tags'></i>&nbsp;&nbsp;".$label."</p></div></li>";
         }
         return $result;
     }
