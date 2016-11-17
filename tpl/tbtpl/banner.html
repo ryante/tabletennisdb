@@ -2,13 +2,15 @@
 	<div class="container">
 		<h2>&nbsp;</h2>
 		<div class="news_seek">
-			<form method="post" action="" id="form">
-				<input style="width: 200px;" value="43" name="pid" type="hidden">
-				<input style="width: 200px;" value="22" name="mid" type="hidden">
-				<input style="display: inline-block; width: 200px; padding:5px;" value="" name="keywords" id="k" class="text" type="text" placeholder='请输入关键字'>
-				<img src="images/btn_search.png" onclick="search_news()" alt="搜索网站案例" height="16" width="16">
+			<form method="post" action="index.php?c=project&f=index&id=news" id="search">
+				<input style="display: inline-block; width: 200px; padding:5px;" value="{$keywords}" name="keywords" id="k" class="text" type="text" placeholder='请输入关键字'>
+				<img src="images/btn_search.png" onclick="search_news()" alt="搜索你所需要的内容" height="16" width="16">
 			</form>
 		</div>
 	</div>
-	
+	<script>
+		function search_news(){
+			$('#search').submit();
+		}
+	</script>
 </div>

@@ -23,7 +23,7 @@
 							相关标签 <i class="glyphicon glyphicon-tags"></i>
 							<div class="tag-list">
                                 <!-- loop from=$rs.label key=$key value=$value id=list_id-->
-                                <a href="index.php?label={$value.title}" class="tag">{$value.title}</a>
+                                <a href="index.php?c=project&f=index&id=news&label={$value.title}" class="tag">{$value.title}</a>
                                 <!-- /loop -->
 							</div>
 							<div class="clearfix"></div>
@@ -54,70 +54,36 @@
 										<small>价格</small><strong>  ￥ {=sprintf('%.2f',$rs.price)}</strong>
 									</div>
 								</div>
-								
+
 								<div class="col-md-8" style="padding:0px;">
 									<table class="mytable wow fadeInUp animated" data-wow-delay="0.4s" cellspacing="0">
 										<tr>
 											<th  colspan="2">用户评级</th>
 										</tr>
-
+                                        <!-- loop from=$rs.offical key=$key value=$value id=list_id-->
 										<tr>
-											<td class="specalt">属性名 <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="这里是属性说明这里是属性说明这里是属性说明这里是属性说明这里是属性说明"></td>
-											<td class="spec">1</td>
+											<td class="specalt {if $value.title=='总评'} overall{/if }">{$value.title} <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="{$value.note}"></td>
+											<td class="spec {if $value.title=='总评'} overall{/if }">{$value.val}</td>
 										</tr>
-
-										<tr>
-											<td class="specalt">属性名 <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="这里是属性说明这里是属性说明这里是属性说明这里是属性说明这里是属性说明"></td>
-											<td class="spec">2</td>
-										</tr>
-										<tr>
-											<td class="specalt">属性名 <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="这里是属性说明这里是属性说明这里是属性说明这里是属性说明这里是属性说明"></td>
-											<td class="spec">3</td>
-										</tr>
-										<tr>
-											<td class="specalt">属性名 <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="这里是属性说明这里是属性说明这里是属性说明这里是属性说明这里是属性说明"></td>
-											<td class="spec">4</td>
-										</tr>
-										<tr>
-											<td class="specalt">属性名 <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="这里是属性说明这里是属性说明这里是属性说明这里是属性说明这里是属性说明"></td>
-											<td class="spec">5</td>
-										</tr>
-										<tr>
-											<td class="specalt">属性名 <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="这里是属性说明这里是属性说明这里是属性说明这里是属性说明这里是属性说明"></td>
-											<td class="spec">6</td>
-										</tr>
-										<tr>
-											<td class="specalt overall">总体</td>
-											<td class="spec overall">6</td>
-										</tr>
+                                        <!-- /loop -->
 									</table>
+                                    {if !$rs.unoffical}
 									<p class="text-primary wow fadeInUp animated" data-wow-delay="0.5s">这是没有录入供应商评级时的提示</p>
+                                    {else}
 									<table class="mytable wow fadeInUp animated" data-wow-delay="0.5s" cellspacing="0">
 										<tr>
 											<th  colspan="2">供应商评级</th>
-											
+
 										</tr>
-										<tr>
-											<td class="specalt">属性名 <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="这里是属性说明这里是属性说明这里是属性说明这里是属性说明这里是属性说明"></td>
-											<td class="spec">1</td>
-										</tr>
-										<tr>
-											<td class="specalt">属性名 <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="这里是属性说明这里是属性说明这里是属性说明这里是属性说明这里是属性说明"></td>
-											<td class="spec">2</td>
-										</tr>
-										<tr>
-											<td class="specalt">属性名 <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="这里是属性说明这里是属性说明这里是属性说明这里是属性说明这里是属性说明"></td>
-											<td class="spec">3</td>
-										</tr>
-										<tr>
-											<td class="specalt">属性名 <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="这里是属性说明这里是属性说明这里是属性说明这里是属性说明这里是属性说明"></td>
-											<td class="spec">4</td>
-										</tr>
-										<tr>
-											<td class="specalt overall">总体</td>
-											<td class="spec overall">6</td>
-										</tr>
+                                        <!-- loop from=$rs.unoffical key=$key value=$value id=list_id-->
+                                        <tr>
+                                            <td class="specalt {if $value.title=='总评'} overall{/if }">{$value.title} <img class="hidden-xs" src="images/btn-info.gif" title="" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="{$value.note}"></td>
+                                            <td class="spec {if $value.title=='总评'} overall{/if }">{$value.val}</td>
+                                        </tr>
+                                        <!-- /loop -->
+
 									</table>
+                                    {/if}
 								</div>
 								<div class="statement wow fadeInLeft fr animated" data-wow-delay="0.4s">
 									<ul class="nav nav-tabs" role="tablist">
@@ -162,7 +128,7 @@
 												<i class="glyphicon glyphicon-time"></i>&nbsp;&nbsp;{func date "H:i:s" $rs.dateline}&nbsp;&nbsp;&nbsp;&nbsp;
 												<i class="glyphicon glyphicon-tags"></i>&nbsp;&nbsp;
                                                 <!-- loop from=$value.labels key=$k value=$v id=list_id-->
-												    <a href="index.php?label={$v.label}" >{$v.label_name}</a>&nbsp;&nbsp;
+												    <a href="index.php?c=project&f=index&id=news&label={$v.label}" >{$v.label_name}</a>&nbsp;&nbsp;
                                                 <!-- /loop -->
 											</p>
 										</div>
@@ -183,7 +149,7 @@
 								<h4>热门标签</h4>
                                 <div class="tag-list">
                                     <!-- loop from=$hotTags key=$key value=$value id=list_id-->
-                                    <a href="index.php?label={$value.title}" class="tag">{$value.title}</a>
+                                    <a href="index.php?c=project&f=index&id=news&label={$value.title}" class="tag">{$value.title}</a>
                                     <!-- /loop -->
                                 </div>
 								<div class="clearfix"></div>
@@ -210,7 +176,6 @@
                                 $("#recommendArticle").append(data.content);
                                 $('#pageid').val(pageid + 1);
                             } else {
-                                alert(data.content);
                                 $('#loadMore').html(data.content);
                                 $('#loadMore').attr('disabled',true);
                                 $('#loadMore').css('cursor','default');

@@ -71,15 +71,15 @@ $(document).ready(function(){
     },function(){
         $(this).find(".line").remove();
     });
-    $(".news_seek img").mouseenter(function(){
-        $(this).siblings("input").stop().animate({width:200},600).select();
-    });
+    //$(".news_seek img").mouseenter(function(){
+    //    $(this).siblings("input").stop().animate({width:200},600).select();
+    //});
     $(".inside_banner").click(function(e){
         $(this).find(".text").animate({width:0},300);
     });
-    $(".news_seek").click(function(e){
-        e.stopPropagation();
-    });
+    //$(".news_seek").click(function(e){
+    //    e.stopPropagation();
+    //});
 
    
 });

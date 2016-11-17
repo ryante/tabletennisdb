@@ -1,135 +1,49 @@
 ﻿<!-- include tpl=head -->
 	<body>
 			<!-- include tpl=nav -->
-			<!-- include tpl=banner -->			
+			<!-- include tpl=banner -->
 			<div class="testimonials-section" style="padding:0px">
 				<div class="container">
 					<div class="news_list">
 						<ul>
+							<!-- loop from=$rslist key=$key value=$value -->
 							<li class="wow fadeInLeft animated animated" data-wow-delay="0.4s">
 								<div class="news_time fl">
-									<span class="day">07</span>
-									<span class="year">2016-03</span>
-									<span class="author">Ryant_Chan</span>
+									<span class="day">{func date "d" $value.dateline}</span>
+									<span class="year">{func date "Y-m" $value.dateline}</span>
+									<span class="author">{if $value.user_id==0}管理员{else}{$value.user_id}{/if}</span>
 									<span class="type">
-										<a href="#">
-										网站优化                    </a>
+										<a href="javascript:void(0)" style="cursor: text; text-decoration: none;">评测</a>
 									</span>
 								</div>
 								<div class="news_cont fr">
 									<h2>
-									<a href="#">如何利用门户网页提高访问量</a>
+										<a href="index.php?id={$value.id}">{$value.title}</a>
 									</h2>
 									<p class="demo">
-										<a href="arc_detail.html">
-										现在，在一些网管中，流传着这样一个神话，只要将网站提交到数百个搜索引擎，访问量就会大增。结果真是这样吗？ 请看一组统计数据，95％以上的人通过搜索结果中前六个链接，查看他们寻找的内容；排名在前10位的站点，比11到30位的站点，得到的访问量多78％；前30名站点得到的访问量，占整个搜索结果的90％以上；排在30位以后的站点，几乎无人光顾。1997年12月，Yahoo一个月内处理了5500万人次检索，一个拥有一两个重要关键字较好排......                    </a>
+										<a href="index.php?id={$value.id}">
+											{func phpok_cut $value.note 180 …}
+										</a>
 									</p>
 									<p class="vis">
 										<div  class="btn_news_more" >
-											<a href="arc_detail.html" title="新闻资讯" class="btn">查看详细</a>
+									<a href="index.php?id={$value.id}" title="{$value.title}" class="btn">查看详细</a>
 										</div>
-										浏览次数：360 &nbsp;&nbsp;
-										转自：<a href="http://www.gzwebcreate.com/index.php?id=1535" target="_blank">http://www.gzwebcreate.com/index.php?id=1535</a> &nbsp; &nbsp;
+										<i class="glyphicon glyphicon-eye-open"></i> &nbsp;&nbsp;{$value.hits} &nbsp;&nbsp;&nbsp;&nbsp;
+										<i class="glyphicon glyphicon-time"></i>&nbsp;&nbsp;{func date "H:i:s" $rs.dateline}&nbsp;&nbsp;&nbsp;&nbsp;
+										<i class="glyphicon glyphicon-tags"></i>&nbsp;&nbsp;
+										<!-- loop from=$value.label key=$k value=$v id=list_id-->
+										<a href="index.php?c=project&f=index&id=news&label={$v.val}" >{$v.title}</a>&nbsp;&nbsp;
+										<!-- /loop -->
 									</p>
 								</div>
 							</li>
-							<li class="wow fadeInLeft animated animated" data-wow-delay="0.4s">
-								<div class="news_time fl">
-									<span class="day">07</span>
-									<span class="year">2016-03</span>
-									<span class="author">Ryant_Chan</span>
-									<span class="type">
-										<a href="#">
-										网站优化                    </a>
-									</span>
-								</div>
-								<div class="news_cont fr">
-									<h2>
-									<a href="#">如何利用门户网页提高访问量</a>
-									</h2>
-									<p class="demo">
-										<a href="#">
-										现在，在一些网管中，流传着这样一个神话，只要将网站提交到数百个搜索引擎，访问量就会大增。结果真是这样吗？ 请看一组统计数据，95％以上的人通过搜索结果中前六个链接，查看他们寻找的内容；排名在前10位的站点，比11到30位的站点，得到的访问量多78％；前30名站点得到的访问量，占整个搜索结果的90％以上；排在30位以后的站点，几乎无人光顾。1997年12月，Yahoo一个月内处理了5500万人次检索，一个拥有一两个重要关键字较好排......                    </a>
-									</p>
-									<p class="vis">
-										<div  class="btn_news_more" >
-											<a href="arc_detail.html" title="新闻资讯" class="btn">查看详细</a>
-										</div>
-										浏览次数：360 &nbsp;&nbsp;
-										转自：<a href="http://www.gzwebcreate.com/index.php?id=1535" target="_blank">http://www.gzwebcreate.com/index.php?id=1535</a> &nbsp; &nbsp;
-									</p>
-								</div>
-							</li>
-							<li class="wow fadeInLeft animated animated" data-wow-delay="0.4s">
-								<div class="news_time fl">
-									<span class="day">07</span>
-									<span class="year">2016-03</span>
-									<span class="author">Ryant_Chan</span>
-									<span class="type">
-										<a href="#">
-										网站优化                    </a>
-									</span>
-								</div>
-								<div class="news_cont fr">
-									<h2>
-									<a href="#">如何利用门户网页提高访问量</a>
-									</h2>
-									<p class="demo">
-										<a href="#">
-										现在，在一些网管中，流传着这样一个神话，只要将网站提交到数百个搜索引擎，访问量就会大增。结果真是这样吗？ 请看一组统计数据，95％以上的人通过搜索结果中前六个链接，查看他们寻找的内容；排名在前10位的站点，比11到30位的站点，得到的访问量多78％；前30名站点得到的访问量，占整个搜索结果的90％以上；排在30位以后的站点，几乎无人光顾。1997年12月，Yahoo一个月内处理了5500万人次检索，一个拥有一两个重要关键字较好排......                    </a>
-									</p>
-									<p class="vis">
-										<div  class="btn_news_more" >
-											<a href="arc_detail.html" title="新闻资讯" class="btn">查看详细</a>
-										</div>
-										浏览次数：360 &nbsp;&nbsp;
-										转自：<a href="http://www.gzwebcreate.com/index.php?id=1535" target="_blank">http://www.gzwebcreate.com/index.php?id=1535</a> &nbsp; &nbsp;
-									</p>
-								</div>
-							</li>
-							<li class="wow fadeInLeft animated animated" data-wow-delay="0.4s">
-								<div class="news_time fl">
-									<span class="day">07</span>
-									<span class="year">2016-03</span>
-									<span class="author">Ryant_Chan</span>
-									<span class="type">
-										<a href="#">
-										网站优化                    </a>
-									</span>
-								</div>
-								<div class="news_cont fr">
-									<h2>
-									<a href="#">如何利用门户网页提高访问量</a>
-									</h2>
-									<p class="demo">
-										<a href="#">
-										现在，在一些网管中，流传着这样一个神话，只要将网站提交到数百个搜索引擎，访问量就会大增。结果真是这样吗？ 请看一组统计数据，95％以上的人通过搜索结果中前六个链接，查看他们寻找的内容；排名在前10位的站点，比11到30位的站点，得到的访问量多78％；前30名站点得到的访问量，占整个搜索结果的90％以上；排在30位以后的站点，几乎无人光顾。1997年12月，Yahoo一个月内处理了5500万人次检索，一个拥有一两个重要关键字较好排......                    </a>
-									</p>
-									<p class="vis">
-										<div  class="btn_news_more" >
-											<a href="arc_detail.html" title="新闻资讯" class="btn">查看详细</a>
-										</div>
-										浏览次数：360 &nbsp;&nbsp;
-										转自：<a href="http://www.gzwebcreate.com/index.php?id=1535" target="_blank">http://www.gzwebcreate.com/index.php?id=1535</a> &nbsp; &nbsp;
-									</p>
-								</div>
-							</li>
+							<!-- /loop -->
+
 						</ul>
 					</div>
-					
-					<div class="page wow fadeInUpBig animated" data-wow-delay="0.4s">
-						<nav>
-							<ul class="pagination">
-								<li class="disabled"><a href="#">«</a></li>
-								<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li><a href="#">»</a></li>
-							</ul>
-						</nav>
-					</div>
+
+                    <!-- include tpl=page -->
 				</div>
 			</div>
 			<!--about-->

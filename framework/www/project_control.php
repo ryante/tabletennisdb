@@ -198,6 +198,7 @@ class project_control extends phpok_control
 			$pageurl .= "tag=".rawurlencode($tag)."&";
 			$this->assign("tag",$tag);
 		}
+
 		if($keywords){
 			$dt['keywords'] = $keywords;
 			$pageurl .= "keywords=".rawurlencode($keywords)."&";
@@ -262,6 +263,13 @@ class project_control extends phpok_control
 			$dt['attr'] = $attr;
 		}
 
+		//标签点击的操作
+		$label = $this->get('label');
+		if($label){
+			$dt = $this->label($label,$dt);
+		}
+
+
 		$info = $this->call->phpok('_arclist',$dt);
 		unset($dt);
 		$this->assign("pageid",$pageid);
@@ -286,6 +294,18 @@ class project_control extends phpok_control
 		}
 		unset($rslist,$total,$pageurl,$psize,$pageid,$rs,$parent_rs);
 		$this->view($tplfile);
+	}
+
+	//标签点击的操作方法
+	public function label($label,$dt){
+		$this->db->query("UPDATE tb_opt SET `clicks`=clicks+1 WHERE `val`='{$label}'");
+		$lidSet = $this->db->get_all("SELECT lid FROM tb_list_bind_label WHERE label='{$label}'");
+		foreach( $lidSet as $key => $value ){
+			$lidArr[] = $value['lid'];
+		}
+		$lid = implode(',',$lidArr);
+		$dt['idin'] = $lid;
+		return $dt;
 	}
 }
 ?>

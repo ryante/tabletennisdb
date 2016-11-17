@@ -141,13 +141,7 @@ class content_control extends phpok_control
 		//EDITED START
 		$globalConfig = $this->config;
 		if(in_array($project['module'],$globalConfig['module']['show_id'])){
-            //将器材内容分成两部分
-            $content1 = mb_substr($rs['content'],0,200,'utf-8');
-            $content2 = mb_substr($rs['content'],200,mb_strlen($rs['content']),'utf-8');
-            $rs['content'] = '';
-            $rs['content']['first'] = $content1;
-            $rs['content']['last'] = $content2;
-
+            $rs = $this->material_detail_format($rs);
 
 			//推荐文章
             if(!empty($rs['label'])){
@@ -248,8 +242,8 @@ class content_control extends phpok_control
 		return $rs;
 	}
 
+    //器材详情页推荐文章
     public function ajax_article_format($articles){
-
         $result = '';
         foreach ($articles as $article){
             $user = $article['user_id'] == 0 ? '管理员' :  $article['user_id'];
@@ -257,11 +251,59 @@ class content_control extends phpok_control
 
             $label = '';
             foreach ($article['labels'] as $value){
-                $label .= "<a href='index.php?label=".$value['label']."' >".$value['label_name']."</a>&nbsp;&nbsp;";
+                $label .= "<a href='index.php?c=project&f=index&id=news&label=".$value['label']."' >".$value['label_name']."</a>&nbsp;&nbsp;";
             }
             $result .= "<li class='wow fadeInLeft animated animated' data-wow-delay='0.4s'><div class='news_time fl'><span class='day'>".date('d',$article['dateline'])."</span><span class='year'>".date('Y-m',$article['dateline'])."</span><span class='author'>".$user."</span></div><div class='news_cont fr'><h2><a href='index.php?id=".$article['id']."'>".$article['title']."</a></h2><p class='demo'><a href='index.php?id=".$article['id']."'>".$content."</a></p><p class='vis'><div  class='btn_news_more' ><a href='index.php?id=".$article['id']."' title='".$article['title']."' class='btn'>查看详细</a></div><i class='glyphicon glyphicon-eye-open'></i> &nbsp;&nbsp;".$article['hits']." &nbsp;&nbsp;&nbsp;&nbsp;<i class='glyphicon glyphicon-time'></i>&nbsp;&nbsp;".date('H:i:s',$article['dateline'])."&nbsp;&nbsp;&nbsp;&nbsp;<i class='glyphicon glyphicon-tags'></i>&nbsp;&nbsp;".$label."</p></div></li>";
         }
         return $result;
+    }
+
+    //器材详情面属性展示
+    public function material_detail_format($rs){
+        $moduleInfo = $this->db->get_one("SELECT module FROM tb_project where id={$rs['project_id']}");
+        $moduleId = $moduleInfo['module'];
+        $showListField = $this->db->get_all("SELECT list_sort,identifier,title,note FROM tb_module_fields WHERE module_id={$moduleId}");//获取该模块所有的扩展字段
+        foreach ($showListField as $listKey => $listField){
+            $showListField[$listKey]['title'] = material_str_replace($listField['title']);
+        }
+
+        foreach ($rs as $k => $v){
+            if($k == 'thumb' || $k == 'price' || $k == 'label' || $k == 'content'){
+                continue;
+            }
+            foreach ($showListField as $key => $value){
+                if($k==$value['identifier']){
+                    if(stripos($value['identifier'],'m_') !== false){
+                        //官方属性
+                        $offical[$k]['val'] = empty($rs[$k]['val']) ? $rs[$k] : $rs[$k]['val'];
+                        $offical[$k]['title'] = $value['identifier']=='m_overall' ? '总评' : $value['title'];
+                        $offical[$k]['note'] = $value['note'];
+                    } else {
+                        //非官方属性
+                        $unoffical[$k]['val'] = empty($rs[$k]['val']) ? $rs[$k] : $rs[$k]['val'];
+                        $unoffical[$k]['title'] = $value['identifier']=='overall' ? '总评' : $value['title'];
+                        $unoffical[$k]['note'] = $value['note'];
+                    }
+                }
+            }
+        }
+
+        if(!empty($offical)){
+            $rs['offical'] = $offical;
+        }
+
+        if(!empty($unoffical)){
+            $rs['unoffical'] = $unoffical;
+        }
+
+
+        //将器材内容分成两部分
+        $content1 = mb_substr($rs['content'],0,200,'utf-8');
+        $content2 = mb_substr($rs['content'],200,mb_strlen($rs['content']),'utf-8');
+        $rs['content'] = '';
+        $rs['content']['first'] = $content1;
+        $rs['content']['last'] = $content2;
+        return $rs;
     }
 }
 ?>
